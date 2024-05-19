@@ -15,7 +15,7 @@ import java.util.Scanner;
  *
  * @author alumno
  */
-public class DAM1MontalvoDaSilva_Ivan_Ej099950MiProyectoUT09 {
+public class App {
 
     /**
      * @param args the command line arguments
