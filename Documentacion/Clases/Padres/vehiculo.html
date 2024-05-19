@@ -1,0 +1,244 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<title>Vehiculo.java</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<style type="text/css">
+<!--
+body {color: #a9b7c6; background-color: #2b2b2b; font-family: monospace}
+pre {color: #a9b7c6; background-color: #2b2b2b; font-family: monospace}
+table {color: #888888; background-color: #313335; font-family: monospace}
+.literal {color: #cc7832}
+.ST4 {font-family: monospace; font-style: italic}
+.ST0 {color: #287bde}
+.ST2 {color: #9876aa}
+.ST3 {color: #ffc66d}
+.string {color: #6a8759}
+.number {color: #6897bb}
+.comment {color: #808080}
+.whitespace {color: #505050}
+.ST1 {color: #808080; font-family: monospace; font-weight: bold}
+-->
+</style>
+</head>
+<body>
+<table width="100%"><tr><td align="center">/media/sf_PROGRAMACION/Ejercicios/UT9/Proyecto/DAM1MontalvoDaSilva_Ivan_Ej099950MiProyectoUT09/src/dam1montalvodasilva_ivan_ej099950miproyectout09/Vehiculo.java</td></tr></table>
+<pre>
+  1 <span class="comment">/*</span>
+  2 <span class="comment"> * Click </span><span class="ST0">nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt</span><span class="comment"> to change this license</span>
+  3 <span class="comment"> * Click </span><span class="ST0">nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java</span><span class="comment"> to edit this template</span>
+  4 <span class="comment"> */</span>
+  5 <span class="literal">package</span> dam1montalvodasilva_ivan_ej099950miproyectout09;
+  6 
+  7 <span class="literal">import</span> java.util.Objects;
+  8 
+  9 <span class="comment">/**</span>
+ 10 <span class="comment"> *</span>
+ 11 <span class="comment"> * </span><span class="ST1">@author</span> <span class="comment">alumno</span>
+ 12  <span class="comment">*/</span>
+ 13 <span class="literal">public</span> <span class="literal">abstract</span> <span class="literal">class</span> Vehiculo {
+ 14 
+ 15     <span class="comment">//Atributos</span>
+ 16     <span class="literal">private</span> <span class="literal">int</span> <span class="ST2">id</span>;
+ 17     <span class="literal">private</span> String <span class="ST2">motor</span>;
+ 18     <span class="literal">private</span> <span class="literal">int</span> <span class="ST2">ruedas</span>;
+ 19     <span class="literal">private</span> <span class="literal">int</span> <span class="ST2">asientos</span>;
+ 20     <span class="literal">private</span> <span class="literal">double</span> <span class="ST2">alto</span>;
+ 21     <span class="literal">private</span> <span class="literal">double</span> <span class="ST2">ancho</span>;
+ 22     <span class="literal">private</span> String <span class="ST2">tipoCombustible</span>;
+ 23     <span class="literal">private</span> <span class="literal">double</span> <span class="ST2">capacidadDeposito</span>;
+ 24     <span class="literal">private</span> <span class="literal">double</span> <span class="ST2">velocidadMaxima</span>;
+ 25     <span class="literal">private</span> <span class="literal">double</span> <span class="ST2">precio</span>;
+ 26     <span class="literal">private</span> String <span class="ST2">color</span>;
+ 27 
+ 28     @Override
+ 29     <span class="literal">public</span> String <span class="ST3">toString</span>() {
+ 30         <span class="literal">return</span> <span class="string">&quot;</span><span class="string">, color: </span><span class="string">&quot;</span> + <span class="ST2">color</span> + <span class="string">&quot;</span><span class="string">, motor: </span><span class="string">&quot;</span> + <span class="ST2">motor</span> + <span class="string">&quot;</span><span class="string">, numero de ruedas: </span><span class="string">&quot;</span> + <span class="ST2">ruedas</span> + <span class="string">&quot;</span><span class="string">, asientos: </span><span class="string">&quot;</span> + <span class="ST2">asientos</span> + <span class="string">&quot;</span><span class="literal">\n</span><span class="string">,alto: </span><span class="string">&quot;</span> + <span class="ST2">alto</span> + <span class="string">&quot;</span><span class="string">, ancho: </span><span class="string">&quot;</span> + <span class="ST2">ancho</span> + <span class="string">&quot;</span><span class="string">, tipo de combustible: </span><span class="string">&quot;</span> + <span class="ST2">tipoCombustible</span> + <span class="string">&quot;</span><span class="string">, Capacidad del deposito: </span><span class="string">&quot;</span> + <span class="ST2">capacidadDeposito</span> + <span class="string">&quot;</span><span class="literal">\n</span><span class="string">, velocidad máxima: </span><span class="string">&quot;</span> + <span class="ST2">velocidadMaxima</span> + <span class="string">&quot;</span><span class="string">, precio: </span><span class="string">&quot;</span> + <span class="ST2">precio</span>;
+ 31     }
+ 32 
+ 33     <span class="comment">/*Constructores*/</span>
+ 34     <span class="comment">//Completo</span>
+ 35     <span class="literal">public</span> Vehiculo(<span class="literal">int</span> id, String color, String motor, <span class="literal">int</span> ruedas, <span class="literal">int</span> asientos, <span class="literal">double</span> alto, <span class="literal">double</span> ancho, String tipoCombustible, <span class="literal">double</span> capacidadDeposito, <span class="literal">double</span> velocidadMaxima, <span class="literal">double</span> precio) {
+ 36         <span class="literal">this</span>.<span class="ST2">id</span> = id;
+ 37         <span class="literal">this</span>.<span class="ST2">color</span> = color;
+ 38         <span class="literal">this</span>.<span class="ST2">motor</span> = motor;
+ 39         <span class="literal">this</span>.<span class="ST2">ruedas</span> = ruedas;
+ 40         <span class="literal">this</span>.<span class="ST2">asientos</span> = asientos;
+ 41         <span class="literal">this</span>.<span class="ST2">alto</span> = alto;
+ 42         <span class="literal">this</span>.<span class="ST2">ancho</span> = ancho;
+ 43         <span class="literal">this</span>.<span class="ST2">tipoCombustible</span> = tipoCombustible;
+ 44         <span class="literal">this</span>.<span class="ST2">capacidadDeposito</span> = capacidadDeposito;
+ 45         <span class="literal">this</span>.<span class="ST2">velocidadMaxima</span> = velocidadMaxima;
+ 46         <span class="literal">this</span>.<span class="ST2">precio</span> = precio;
+ 47     }
+ 48 
+ 49     <span class="comment">//Vacio</span>
+ 50     <span class="literal">public</span> Vehiculo() {
+ 51         <span class="literal">this</span>.<span class="ST2">color</span> = <span class="string">&quot;&quot;</span>;
+ 52         <span class="literal">this</span>.<span class="ST2">motor</span> = <span class="string">&quot;&quot;</span>;
+ 53         <span class="literal">this</span>.<span class="ST2">ruedas</span> = <span class="number">0</span>;
+ 54         <span class="literal">this</span>.<span class="ST2">asientos</span> = <span class="number">0</span>;
+ 55         <span class="literal">this</span>.<span class="ST2">alto</span> = <span class="number">0.</span>;
+ 56         <span class="literal">this</span>.<span class="ST2">ancho</span> = <span class="number">0.</span>;
+ 57         <span class="literal">this</span>.<span class="ST2">tipoCombustible</span> = <span class="string">&quot;&quot;</span>;
+ 58         <span class="literal">this</span>.<span class="ST2">capacidadDeposito</span> = <span class="number">0.</span>;
+ 59         <span class="literal">this</span>.<span class="ST2">velocidadMaxima</span> = <span class="number">0.</span>;
+ 60         <span class="literal">this</span>.<span class="ST2">precio</span> = <span class="number">0.</span>;
+ 61     }
+ 62 
+ 63     <span class="comment">//Copia</span>
+ 64     <span class="literal">public</span> Vehiculo(Vehiculo v) {
+ 65         <span class="literal">this</span>.<span class="ST2">id</span> = v.getId();
+ 66         <span class="literal">this</span>.<span class="ST2">color</span> = v.getColor();
+ 67         <span class="literal">this</span>.<span class="ST2">motor</span> = v.getMotor();
+ 68         <span class="literal">this</span>.<span class="ST2">ruedas</span> = v.getRuedas();
+ 69         <span class="literal">this</span>.<span class="ST2">asientos</span> = v.getAsientos();
+ 70         <span class="literal">this</span>.<span class="ST2">alto</span> = v.getAlto();
+ 71         <span class="literal">this</span>.<span class="ST2">ancho</span> = v.getAncho();
+ 72         <span class="literal">this</span>.<span class="ST2">tipoCombustible</span> = v.getTipoCombustible();
+ 73         <span class="literal">this</span>.<span class="ST2">capacidadDeposito</span> = v.getCapacidadDeposito();
+ 74         <span class="literal">this</span>.<span class="ST2">velocidadMaxima</span> = v.getVelocidadMaxima();
+ 75         <span class="literal">this</span>.<span class="ST2">precio</span> = v.getPrecio();
+ 76     }
+ 77 
+ 78     <span class="comment">//Getters y setters</span>
+ 79     <span class="literal">public</span> String <span class="ST3">getMotor</span>() {
+ 80         <span class="literal">return</span> <span class="ST2">motor</span>;
+ 81     }
+ 82 
+ 83     <span class="literal">public</span> <span class="literal">void</span> <span class="ST3">setMotor</span>(String motor) {
+ 84         <span class="literal">this</span>.<span class="ST2">motor</span> = motor;
+ 85     }
+ 86 
+ 87     <span class="literal">public</span> <span class="literal">int</span> <span class="ST3">getRuedas</span>() {
+ 88         <span class="literal">return</span> <span class="ST2">ruedas</span>;
+ 89     }
+ 90 
+ 91     <span class="literal">public</span> <span class="literal">void</span> <span class="ST3">setRuedas</span>(<span class="literal">int</span> ruedas) {
+ 92         <span class="literal">this</span>.<span class="ST2">ruedas</span> = ruedas;
+ 93     }
+ 94 
+ 95     <span class="literal">public</span> <span class="literal">int</span> <span class="ST3">getAsientos</span>() {
+ 96         <span class="literal">return</span> <span class="ST2">asientos</span>;
+ 97     }
+ 98 
+ 99     <span class="literal">public</span> <span class="literal">void</span> <span class="ST3">setAsientos</span>(<span class="literal">int</span> asientos) {
+100         <span class="literal">this</span>.<span class="ST2">asientos</span> = asientos;
+101     }
+102 
+103     <span class="literal">public</span> <span class="literal">double</span> <span class="ST3">getAlto</span>() {
+104         <span class="literal">return</span> <span class="ST2">alto</span>;
+105     }
+106 
+107     <span class="literal">public</span> <span class="literal">void</span> <span class="ST3">setAlto</span>(<span class="literal">double</span> alto) {
+108         <span class="literal">this</span>.<span class="ST2">alto</span> = alto;
+109     }
+110 
+111     <span class="literal">public</span> <span class="literal">double</span> <span class="ST3">getAncho</span>() {
+112         <span class="literal">return</span> <span class="ST2">ancho</span>;
+113     }
+114 
+115     <span class="literal">public</span> <span class="literal">void</span> <span class="ST3">setAncho</span>(<span class="literal">double</span> ancho) {
+116         <span class="literal">this</span>.<span class="ST2">ancho</span> = ancho;
+117     }
+118 
+119     <span class="literal">public</span> String <span class="ST3">getTipoCombustible</span>() {
+120         <span class="literal">return</span> <span class="ST2">tipoCombustible</span>;
+121     }
+122 
+123     <span class="literal">public</span> <span class="literal">void</span> <span class="ST3">setTipoCombustible</span>(String tipoCombustible) {
+124         <span class="literal">this</span>.<span class="ST2">tipoCombustible</span> = tipoCombustible;
+125     }
+126 
+127     <span class="literal">public</span> <span class="literal">double</span> <span class="ST3">getCapacidadDeposito</span>() {
+128         <span class="literal">return</span> <span class="ST2">capacidadDeposito</span>;
+129     }
+130 
+131     <span class="literal">public</span> <span class="literal">void</span> <span class="ST3">setCapacidadDeposito</span>(<span class="literal">double</span> CapacidadDeposito) {
+132         <span class="literal">this</span>.<span class="ST2">capacidadDeposito</span> = CapacidadDeposito;
+133     }
+134 
+135     <span class="literal">public</span> <span class="literal">double</span> <span class="ST3">getVelocidadMaxima</span>() {
+136         <span class="literal">return</span> <span class="ST2">velocidadMaxima</span>;
+137     }
+138 
+139     <span class="literal">public</span> <span class="literal">double</span> <span class="ST3">getPrecio</span>() {
+140         <span class="literal">return</span> <span class="ST2">precio</span>;
+141     }
+142 
+143     <span class="literal">public</span> <span class="literal">void</span> <span class="ST3">setPrecio</span>(<span class="literal">double</span> precio) {
+144         <span class="literal">this</span>.<span class="ST2">precio</span> = precio;
+145     }
+146 
+147     <span class="comment">//equals y hashCode</span>
+148     @Override
+149     <span class="literal">public</span> <span class="literal">int</span> <span class="ST3">hashCode</span>() {
+150         <span class="literal">int</span> hash = <span class="number">3</span>;
+151         hash = <span class="number">83</span> * hash + Objects.<span class="ST4">hashCode</span>(<span class="literal">t</span><span class="literal">his</span>.<span class="ST2">motor</span>);
+152         hash = <span class="number">83</span> * hash + <span class="literal">this</span>.<span class="ST2">ruedas</span>;
+153         hash = <span class="number">83</span> * hash + <span class="literal">this</span>.<span class="ST2">asientos</span>;
+154         hash = <span class="number">83</span> * hash + (<span class="literal">int</span>) (Double.<span class="ST4">doubleToLongBits</span>(<span class="literal">t</span><span class="literal">his</span>.<span class="ST2">alto</span>) ^ (Double.<span class="ST4">doubleToLongBits</span>(<span class="literal">t</span><span class="literal">his</span>.<span class="ST2">alto</span>) &gt;&gt;&gt; <span class="number">32</span>));
+155         hash = <span class="number">83</span> * hash + (<span class="literal">int</span>) (Double.<span class="ST4">doubleToLongBits</span>(<span class="literal">t</span><span class="literal">his</span>.<span class="ST2">ancho</span>) ^ (Double.<span class="ST4">doubleToLongBits</span>(<span class="literal">t</span><span class="literal">his</span>.<span class="ST2">ancho</span>) &gt;&gt;&gt; <span class="number">32</span>));
+156         hash = <span class="number">83</span> * hash + Objects.<span class="ST4">hashCode</span>(<span class="literal">t</span><span class="literal">his</span>.<span class="ST2">tipoCombustible</span>);
+157         hash = <span class="number">83</span> * hash + (<span class="literal">int</span>) (Double.<span class="ST4">doubleToLongBits</span>(<span class="literal">t</span><span class="literal">his</span>.<span class="ST2">capacidadDeposito</span>) ^ (Double.<span class="ST4">doubleToLongBits</span>(<span class="literal">t</span><span class="literal">his</span>.<span class="ST2">capacidadDeposito</span>) &gt;&gt;&gt; <span class="number">32</span>));
+158         hash = <span class="number">83</span> * hash + (<span class="literal">int</span>) (Double.<span class="ST4">doubleToLongBits</span>(<span class="literal">t</span><span class="literal">his</span>.<span class="ST2">velocidadMaxima</span>) ^ (Double.<span class="ST4">doubleToLongBits</span>(<span class="literal">t</span><span class="literal">his</span>.<span class="ST2">velocidadMaxima</span>) &gt;&gt;&gt; <span class="number">32</span>));
+159         <span class="literal">return</span> hash;
+160     }
+161 
+162     @Override
+163     <span class="literal">public</span> <span class="literal">boolean</span> <span class="ST3">equals</span>(Object obj) {
+164         <span class="literal">if</span> (<span class="literal">this</span> == obj) {
+165             <span class="literal">return</span> <span class="literal">true</span>;
+166         }
+167         <span class="literal">if</span> (obj == <span class="literal">null</span>) {
+168             <span class="literal">return</span> <span class="literal">false</span>;
+169         }
+170         <span class="literal">if</span> (getClass() != obj.getClass()) {
+171             <span class="literal">return</span> <span class="literal">false</span>;
+172         }
+173         <span class="literal">final</span> Vehiculo other = (Vehiculo) obj;
+174         <span class="literal">if</span> (<span class="literal">this</span>.<span class="ST2">ruedas</span> != other.<span class="ST2">ruedas</span>) {
+175             <span class="literal">return</span> <span class="literal">false</span>;
+176         }
+177         <span class="literal">if</span> (<span class="literal">this</span>.<span class="ST2">asientos</span> != other.<span class="ST2">asientos</span>) {
+178             <span class="literal">return</span> <span class="literal">false</span>;
+179         }
+180         <span class="literal">if</span> (Double.<span class="ST4">doubleToLongBits</span>(<span class="literal">t</span><span class="literal">his</span>.<span class="ST2">alto</span>) != Double.<span class="ST4">doubleToLongBits</span>(other.<span class="ST2">alto</span>)) {
+181             <span class="literal">return</span> <span class="literal">false</span>;
+182         }
+183         <span class="literal">if</span> (Double.<span class="ST4">doubleToLongBits</span>(<span class="literal">t</span><span class="literal">his</span>.<span class="ST2">ancho</span>) != Double.<span class="ST4">doubleToLongBits</span>(other.<span class="ST2">ancho</span>)) {
+184             <span class="literal">return</span> <span class="literal">false</span>;
+185         }
+186         <span class="literal">if</span> (Double.<span class="ST4">doubleToLongBits</span>(<span class="literal">t</span><span class="literal">his</span>.<span class="ST2">capacidadDeposito</span>) != Double.<span class="ST4">doubleToLongBits</span>(other.<span class="ST2">capacidadDeposito</span>)) {
+187             <span class="literal">return</span> <span class="literal">false</span>;
+188         }
+189         <span class="literal">if</span> (Double.<span class="ST4">doubleToLongBits</span>(<span class="literal">t</span><span class="literal">his</span>.<span class="ST2">velocidadMaxima</span>) != Double.<span class="ST4">doubleToLongBits</span>(other.<span class="ST2">velocidadMaxima</span>)) {
+190             <span class="literal">return</span> <span class="literal">false</span>;
+191         }
+192 
+193         <span class="literal">if</span> (!Objects.<span class="ST4">equals</span>(<span class="literal">t</span><span class="literal">his</span>.<span class="ST2">motor</span>, other.<span class="ST2">motor</span>)) {
+194             <span class="literal">return</span> <span class="literal">false</span>;
+195         }
+196         <span class="literal">return</span> Objects.<span class="ST4">equals</span>(<span class="literal">t</span><span class="literal">his</span>.<span class="ST2">tipoCombustible</span>, other.<span class="ST2">tipoCombustible</span>);
+197     }
+198 
+199     <span class="literal">public</span> String <span class="ST3">getColor</span>() {
+200         <span class="literal">return</span> <span class="ST2">color</span>;
+201     }
+202 
+203     <span class="literal">public</span> <span class="literal">void</span> <span class="ST3">setColor</span>(String color) {
+204         <span class="literal">this</span>.<span class="ST2">color</span> = color;
+205     }
+206 
+207     <span class="literal">public</span> <span class="literal">int</span> <span class="ST3">getId</span>() {
+208         <span class="literal">return</span> <span class="ST2">id</span>;
+209     }
+210 
+211     <span class="literal">public</span> <span class="literal">void</span> <span class="ST3">setId</span>(<span class="literal">int</span> id) {
+212         <span class="literal">this</span>.<span class="ST2">id</span> = id;
+213     }
+214 
+215 }
+216 
+</pre></body>
+</html>

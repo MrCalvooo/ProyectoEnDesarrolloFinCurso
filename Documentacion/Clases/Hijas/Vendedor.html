@@ -1,0 +1,112 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<title>Vendedor.java</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<style type="text/css">
+<!--
+body {color: #a9b7c6; background-color: #2b2b2b; font-family: monospace}
+pre {color: #a9b7c6; background-color: #2b2b2b; font-family: monospace}
+table {color: #888888; background-color: #313335; font-family: monospace}
+.literal {color: #cc7832}
+.ST4 {font-family: monospace; font-style: italic}
+.ST0 {color: #287bde}
+.ST2 {color: #9876aa}
+.ST3 {color: #ffc66d}
+.string {color: #6a8759}
+.number {color: #6897bb}
+.comment {color: #808080}
+.whitespace {color: #505050}
+.ST1 {color: #808080; font-family: monospace; font-weight: bold}
+-->
+</style>
+</head>
+<body>
+<table width="100%"><tr><td align="center">/media/sf_PROGRAMACION/Ejercicios/UT9/Proyecto/DAM1MontalvoDaSilva_Ivan_Ej099950MiProyectoUT09/src/dam1montalvodasilva_ivan_ej099950miproyectout09/Vendedor.java</td></tr></table>
+<pre>
+ 1 <span class="comment">/*</span>
+ 2 <span class="comment"> * Click </span><span class="ST0">nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt</span><span class="comment"> to change this license</span>
+ 3 <span class="comment"> * Click </span><span class="ST0">nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java</span><span class="comment"> to edit this template</span>
+ 4 <span class="comment"> */</span>
+ 5 <span class="literal">package</span> dam1montalvodasilva_ivan_ej099950miproyectout09;
+ 6 
+ 7 <span class="literal">import</span> java.util.Objects;
+ 8 
+ 9 <span class="comment">/**</span>
+10 <span class="comment"> *</span>
+11 <span class="comment"> * </span><span class="ST1">@author</span> <span class="comment">alumno</span>
+12  <span class="comment">*/</span>
+13 <span class="literal">public</span> <span class="literal">class</span> Vendedor <span class="literal">extends</span> Empleado {
+14 
+15     <span class="literal">private</span> Gerente <span class="ST2">g</span>;
+16     <span class="literal">private</span> <span class="literal">int</span> <span class="ST2">idVendedor</span>;
+17 
+18     @Override
+19     <span class="literal">public</span> String <span class="ST3">toString</span>() {
+20         <span class="literal">return</span> <span class="literal">super</span>.toString() + <span class="string">&quot;</span><span class="literal">\n</span><span class="string">ID del gerente del empleado: </span><span class="string">&quot;</span> + <span class="ST2">g</span>.getIdGerente() + <span class="string">&quot;</span><span class="string">, nombre del gerente: </span><span class="string">&quot;</span> + <span class="ST2">g</span>.getNombre();
+21     }
+22 
+23     <span class="comment">/*Constructores*/</span>
+24     <span class="comment">//Completo</span>
+25     <span class="literal">public</span> Vendedor(Gerente g, <span class="literal">int</span> idVendedor, String nombre, String DNI, String apellidos, <span class="literal">int</span> edad, <span class="literal">double</span> salario) {
+26         <span class="literal">super</span>(nombre, DNI, apellidos, edad, salario);
+27         <span class="literal">this</span>.<span class="ST2">g</span> = g;
+28         <span class="literal">this</span>.<span class="ST2">idVendedor</span> = idVendedor;
+29     }
+30 
+31     <span class="comment">//Copia</span>
+32     <span class="literal">public</span> Vendedor(Gerente g, Vendedor v, Empleado e, Persona p) {
+33         <span class="literal">super</span>(e, p);
+34         <span class="literal">this</span>.<span class="ST2">g</span> = v.getG();
+35         <span class="literal">this</span>.<span class="ST2">idVendedor</span> = v.getIdVendedor();
+36     }
+37 
+38     <span class="comment">//Vacio</span>
+39     <span class="literal">public</span> Vendedor() {
+40         <span class="literal">super</span>();
+41         <span class="literal">this</span>.<span class="ST2">idVendedor</span> = <span class="number">0</span>;
+42     }
+43 
+44     <span class="comment">//Getters y setters</span>
+45     <span class="literal">public</span> Gerente <span class="ST3">getG</span>() {
+46         <span class="literal">return</span> <span class="ST2">g</span>;
+47     }
+48 
+49     <span class="literal">public</span> <span class="literal">void</span> <span class="ST3">setG</span>(Gerente g) {
+50         <span class="literal">this</span>.<span class="ST2">g</span> = g;
+51     }
+52 
+53     @Override
+54     <span class="literal">public</span> <span class="literal">int</span> <span class="ST3">hashCode</span>() {
+55         <span class="literal">int</span> hash = <span class="number">3</span>;
+56         hash = <span class="number">47</span> * hash + Objects.<span class="ST4">hashCode</span>(<span class="literal">t</span><span class="literal">his</span>.<span class="ST2">g</span>);
+57         <span class="literal">return</span> hash;
+58     }
+59 
+60     @Override
+61     <span class="literal">public</span> <span class="literal">boolean</span> <span class="ST3">equals</span>(Object obj) {
+62         <span class="literal">if</span> (<span class="literal">this</span> == obj) {
+63             <span class="literal">return</span> <span class="literal">true</span>;
+64         }
+65         <span class="literal">if</span> (obj == <span class="literal">null</span>) {
+66             <span class="literal">return</span> <span class="literal">false</span>;
+67         }
+68         <span class="literal">if</span> (getClass() != obj.getClass()) {
+69             <span class="literal">return</span> <span class="literal">false</span>;
+70         }
+71         <span class="literal">final</span> Vendedor other = (Vendedor) obj;
+72         <span class="literal">return</span> Objects.<span class="ST4">equals</span>(<span class="literal">t</span><span class="literal">his</span>.<span class="ST2">g</span>, other.<span class="ST2">g</span>);
+73     }
+74 
+75     <span class="literal">public</span> <span class="literal">int</span> <span class="ST3">getIdVendedor</span>() {
+76         <span class="literal">return</span> <span class="ST2">idVendedor</span>;
+77     }
+78 
+79     <span class="literal">public</span> <span class="literal">void</span> <span class="ST3">setIdVendedor</span>(<span class="literal">int</span> idVendedor) {
+80         <span class="literal">this</span>.<span class="ST2">idVendedor</span> = idVendedor;
+81     }
+82 
+83 }
+84 
+</pre></body>
+</html>

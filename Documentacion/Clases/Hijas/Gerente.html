@@ -1,0 +1,128 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<title>Gerente.java</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<style type="text/css">
+<!--
+body {color: #a9b7c6; background-color: #2b2b2b; font-family: monospace}
+pre {color: #a9b7c6; background-color: #2b2b2b; font-family: monospace}
+table {color: #888888; background-color: #313335; font-family: monospace}
+.literal {color: #cc7832}
+.ST4 {font-family: monospace; font-style: italic}
+.ST0 {color: #287bde}
+.ST2 {color: #9876aa}
+.ST3 {color: #ffc66d}
+.string {color: #6a8759}
+.number {color: #6897bb}
+.comment {color: #808080}
+.whitespace {color: #505050}
+.ST1 {color: #808080; font-family: monospace; font-weight: bold}
+-->
+</style>
+</head>
+<body>
+<table width="100%"><tr><td align="center">/media/sf_PROGRAMACION/Ejercicios/UT9/Proyecto/DAM1MontalvoDaSilva_Ivan_Ej099950MiProyectoUT09/src/dam1montalvodasilva_ivan_ej099950miproyectout09/Gerente.java</td></tr></table>
+<pre>
+  1 <span class="comment">/*</span>
+  2 <span class="comment"> * Click </span><span class="ST0">nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt</span><span class="comment"> to change this license</span>
+  3 <span class="comment"> * Click </span><span class="ST0">nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java</span><span class="comment"> to edit this template</span>
+  4 <span class="comment"> */</span>
+  5 <span class="literal">package</span> dam1montalvodasilva_ivan_ej099950miproyectout09;
+  6 
+  7 <span class="literal">import</span> java.util.Objects;
+  8 
+  9 <span class="comment">/**</span>
+ 10 <span class="comment"> *</span>
+ 11 <span class="comment"> * </span><span class="ST1">@author</span> <span class="comment">alumno</span>
+ 12  <span class="comment">*/</span>
+ 13 <span class="literal">public</span> <span class="literal">class</span> Gerente <span class="literal">extends</span> Empleado {
+ 14 
+ 15     <span class="literal">private</span> Jefe <span class="ST2">j</span>;
+ 16     <span class="literal">private</span> <span class="literal">double</span> <span class="ST2">complemento</span>;
+ 17     <span class="literal">private</span> <span class="literal">int</span> <span class="ST2">idGerente</span>;
+ 18 
+ 19     @Override
+ 20     <span class="literal">public</span> String <span class="ST3">toString</span>() {
+ 21         <span class="literal">return</span> <span class="literal">super</span>.toString() + <span class="string">&quot;</span><span class="literal">\n</span><span class="string">Gerente, </span><span class="string">&quot;</span> + <span class="string">&quot;</span><span class="string">jefe: </span><span class="string">&quot;</span> + <span class="ST2">j</span>.getNombre() + <span class="string">&quot;</span><span class="string">ID: </span><span class="string">&quot;</span> + <span class="ST2">idGerente</span> + <span class="string">&quot;</span><span class="string">, complemento: </span><span class="string">&quot;</span> + <span class="ST2">complemento</span>;
+ 22     }
+ 23 
+ 24     <span class="comment">/*Constructores*/</span>
+ 25     <span class="comment">//Completo</span>
+ 26     <span class="literal">public</span> Gerente(Jefe j, <span class="literal">double</span> complemento, <span class="literal">int</span> idGerente, String nombre, String DNI, String apellidos, <span class="literal">int</span> edad, <span class="literal">double</span> salario) {
+ 27         <span class="literal">super</span>(nombre, DNI, apellidos, edad, salario);
+ 28         <span class="literal">this</span>.<span class="ST2">j</span> = j;
+ 29         <span class="literal">this</span>.<span class="ST2">complemento</span> = complemento;
+ 30         <span class="literal">this</span>.<span class="ST2">idGerente</span> = idGerente;
+ 31     }
+ 32 
+ 33     <span class="comment">//Copia</span>
+ 34     <span class="literal">public</span> Gerente(Jefe j, Gerente g, Empleado e, Persona p) {
+ 35         <span class="literal">super</span>(e, p);
+ 36         <span class="literal">this</span>.<span class="ST2">j</span> = j;
+ 37         <span class="literal">this</span>.<span class="ST2">complemento</span> = g.getComplemento();
+ 38         <span class="literal">this</span>.<span class="ST2">idGerente</span> = g.getIdGerente();
+ 39     }
+ 40 
+ 41     <span class="comment">//Vacio</span>
+ 42     <span class="literal">public</span> Gerente() {
+ 43         <span class="literal">super</span>();
+ 44         <span class="literal">this</span>.<span class="ST2">complemento</span> = <span class="number">0.</span>;
+ 45     }
+ 46 
+ 47 
+ 48     <span class="comment">/*Getters y setters*/</span>
+ 49     <span class="literal">public</span> Jefe <span class="ST3">getJ</span>() {
+ 50         <span class="literal">return</span> <span class="ST2">j</span>;
+ 51     }
+ 52 
+ 53     <span class="literal">public</span> <span class="literal">void</span> <span class="ST3">setJ</span>(Jefe j) {
+ 54         <span class="literal">this</span>.<span class="ST2">j</span> = j;
+ 55     }
+ 56 
+ 57     <span class="literal">public</span> <span class="literal">double</span> <span class="ST3">getComplemento</span>() {
+ 58         <span class="literal">return</span> <span class="ST2">complemento</span>;
+ 59     }
+ 60 
+ 61     <span class="literal">public</span> <span class="literal">void</span> <span class="ST3">setComplemento</span>(<span class="literal">double</span> complemento) {
+ 62         <span class="literal">this</span>.<span class="ST2">complemento</span> = complemento;
+ 63     }
+ 64 
+ 65     @Override
+ 66     <span class="literal">public</span> <span class="literal">int</span> <span class="ST3">hashCode</span>() {
+ 67         <span class="literal">int</span> hash = <span class="number">5</span>;
+ 68         hash = <span class="number">79</span> * hash + Objects.<span class="ST4">hashCode</span>(<span class="literal">t</span><span class="literal">his</span>.<span class="ST2">j</span>);
+ 69         hash = <span class="number">79</span> * hash + (<span class="literal">int</span>) (Double.<span class="ST4">doubleToLongBits</span>(<span class="literal">t</span><span class="literal">his</span>.<span class="ST2">complemento</span>) ^ (Double.<span class="ST4">doubleToLongBits</span>(<span class="literal">t</span><span class="literal">his</span>.<span class="ST2">complemento</span>) &gt;&gt;&gt; <span class="number">32</span>));
+ 70         <span class="literal">return</span> hash;
+ 71     }
+ 72 
+ 73     @Override
+ 74     <span class="literal">public</span> <span class="literal">boolean</span> <span class="ST3">equals</span>(Object obj) {
+ 75         <span class="literal">if</span> (<span class="literal">this</span> == obj) {
+ 76             <span class="literal">return</span> <span class="literal">true</span>;
+ 77         }
+ 78         <span class="literal">if</span> (obj == <span class="literal">null</span>) {
+ 79             <span class="literal">return</span> <span class="literal">false</span>;
+ 80         }
+ 81         <span class="literal">if</span> (getClass() != obj.getClass()) {
+ 82             <span class="literal">return</span> <span class="literal">false</span>;
+ 83         }
+ 84         <span class="literal">final</span> Gerente other = (Gerente) obj;
+ 85         <span class="literal">if</span> (Double.<span class="ST4">doubleToLongBits</span>(<span class="literal">t</span><span class="literal">his</span>.<span class="ST2">complemento</span>) != Double.<span class="ST4">doubleToLongBits</span>(other.<span class="ST2">complemento</span>)) {
+ 86             <span class="literal">return</span> <span class="literal">false</span>;
+ 87         }
+ 88         <span class="literal">return</span> Objects.<span class="ST4">equals</span>(<span class="literal">t</span><span class="literal">his</span>.<span class="ST2">j</span>, other.<span class="ST2">j</span>);
+ 89     }
+ 90 
+ 91     <span class="literal">public</span> <span class="literal">int</span> <span class="ST3">getIdGerente</span>() {
+ 92         <span class="literal">return</span> <span class="ST2">idGerente</span>;
+ 93     }
+ 94 
+ 95     <span class="literal">public</span> <span class="literal">void</span> <span class="ST3">setIdGerente</span>(<span class="literal">int</span> idGerente) {
+ 96         <span class="literal">this</span>.<span class="ST2">idGerente</span> = idGerente;
+ 97     }
+ 98 
+ 99 }
+100 
+</pre></body>
+</html>

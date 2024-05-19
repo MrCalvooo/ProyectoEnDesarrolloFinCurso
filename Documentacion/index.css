@@ -1,0 +1,80 @@
+html{
+    background-color: black;
+    color: white;
+}
+
+#acceso{
+    color: orange;
+}
+
+.h1{
+    color: red;
+}
+
+.h2{
+    color: chartreuse;
+}
+
+.h4{
+    color: aqua;
+}
+
+#clientes{
+    color: coral;
+}
+
+#empleados{
+    color: violet;
+}
+
+#vehiculos{
+    color: cyan;
+}
+
+#contraseña{
+    color: fuchsia;
+}
+
+.herramientas{
+    color: lightblue;
+}
+
+.funciones{
+    color: lightsalmon;
+}
+
+.clases{
+    color: lightgreen;
+}
+
+.explicacion{
+    color: pink;
+}
+
+#HashSet{
+    color: aquamarine;
+}
+
+#LinkedList{
+    color: coral;
+}
+
+#List{
+    color: white;
+}
+
+#Map{
+    color: teal;
+}
+
+#Scanner{
+    color: red;
+}
+
+#Set{
+    color: yellow;
+}
+
+#TreeMap{
+    color: blueviolet;
+}

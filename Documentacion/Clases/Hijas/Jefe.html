@@ -1,0 +1,98 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<title>Jefe.java</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<style type="text/css">
+<!--
+body {color: #a9b7c6; background-color: #2b2b2b; font-family: monospace}
+pre {color: #a9b7c6; background-color: #2b2b2b; font-family: monospace}
+table {color: #888888; background-color: #313335; font-family: monospace}
+.literal {color: #cc7832}
+.ST4 {font-family: monospace; font-style: italic}
+.ST0 {color: #287bde}
+.ST2 {color: #9876aa}
+.ST3 {color: #ffc66d}
+.string {color: #6a8759}
+.number {color: #6897bb}
+.comment {color: #808080}
+.whitespace {color: #505050}
+.ST1 {color: #808080; font-family: monospace; font-weight: bold}
+-->
+</style>
+</head>
+<body>
+<table width="100%"><tr><td align="center">/media/sf_PROGRAMACION/Ejercicios/UT9/Proyecto/DAM1MontalvoDaSilva_Ivan_Ej099950MiProyectoUT09/src/dam1montalvodasilva_ivan_ej099950miproyectout09/Jefe.java</td></tr></table>
+<pre>
+ 1 <span class="comment">/*</span>
+ 2 <span class="comment"> * Click </span><span class="ST0">nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt</span><span class="comment"> to change this license</span>
+ 3 <span class="comment"> * Click </span><span class="ST0">nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java</span><span class="comment"> to edit this template</span>
+ 4 <span class="comment"> */</span>
+ 5 <span class="literal">package</span> dam1montalvodasilva_ivan_ej099950miproyectout09;
+ 6 
+ 7 <span class="comment">/**</span>
+ 8 <span class="comment"> *</span>
+ 9 <span class="comment"> * </span><span class="ST1">@author</span> <span class="comment">alumno</span>
+10  <span class="comment">*/</span>
+11 <span class="literal">public</span> <span class="literal">class</span> Jefe <span class="literal">extends</span> Empleado {
+12 
+13     <span class="literal">private</span> <span class="literal">double</span> <span class="ST2">complementario</span>;
+14 
+15     @Override
+16     <span class="literal">public</span> String <span class="ST3">toString</span>() {
+17         <span class="literal">return</span> <span class="string">&quot;</span><span class="string">Jefe: </span><span class="string">&quot;</span> + <span class="literal">super</span>.toString() + <span class="string">&quot;</span><span class="literal">\n</span><span class="string">complemento salarial: </span><span class="string">&quot;</span> + <span class="ST2">complementario</span>;
+18     }
+19 
+20     <span class="comment">/*Constructores*/</span>
+21     <span class="comment">//Completo</span>
+22     <span class="literal">public</span> Jefe(<span class="literal">double</span> complementario, String nombre, String DNI, String apellidos, <span class="literal">int</span> edad, <span class="literal">double</span> salario) {
+23         <span class="literal">super</span>(nombre, DNI, apellidos, edad, salario);
+24         <span class="literal">this</span>.<span class="ST2">complementario</span> = complementario;
+25     }
+26 
+27     <span class="comment">//Copia</span>
+28     <span class="literal">public</span> Jefe(Jefe j, Empleado e, Persona p) {
+29         <span class="literal">super</span>(e, p);
+30         <span class="literal">this</span>.<span class="ST2">complementario</span> = j.getComplementario();
+31     }
+32 
+33     <span class="comment">//Vacio</span>
+34     <span class="literal">public</span> Jefe() {
+35         <span class="literal">super</span>();
+36         <span class="literal">this</span>.<span class="ST2">complementario</span> = <span class="number">0.</span>;
+37     }
+38 
+39     <span class="literal">public</span> <span class="literal">double</span> <span class="ST3">getComplementario</span>() {
+40         <span class="literal">return</span> <span class="ST2">complementario</span>;
+41     }
+42 
+43     <span class="literal">public</span> <span class="literal">void</span> <span class="ST3">setComplementario</span>(<span class="literal">double</span> complementario) {
+44         <span class="literal">this</span>.<span class="ST2">complementario</span> = complementario;
+45     }
+46 
+47     @Override
+48     <span class="literal">public</span> <span class="literal">int</span> <span class="ST3">hashCode</span>() {
+49         <span class="literal">int</span> hash = <span class="number">7</span>;
+50         hash = <span class="number">41</span> * hash + (<span class="literal">int</span>) (Double.<span class="ST4">doubleToLongBits</span>(<span class="literal">t</span><span class="literal">his</span>.<span class="ST2">complementario</span>) ^ (Double.<span class="ST4">doubleToLongBits</span>(<span class="literal">t</span><span class="literal">his</span>.<span class="ST2">complementario</span>) &gt;&gt;&gt; <span class="number">32</span>));
+51         <span class="literal">return</span> hash;
+52     }
+53 
+54     @Override
+55     <span class="literal">public</span> <span class="literal">boolean</span> <span class="ST3">equals</span>(Object obj) {
+56         <span class="literal">if</span> (<span class="literal">this</span> == obj) {
+57             <span class="literal">return</span> <span class="literal">true</span>;
+58         }
+59         <span class="literal">if</span> (obj == <span class="literal">null</span>) {
+60             <span class="literal">return</span> <span class="literal">false</span>;
+61         }
+62         <span class="literal">if</span> (getClass() != obj.getClass()) {
+63             <span class="literal">return</span> <span class="literal">false</span>;
+64         }
+65         <span class="literal">final</span> Jefe other = (Jefe) obj;
+66         <span class="literal">return</span> Double.<span class="ST4">doubleToLongBits</span>(<span class="literal">t</span><span class="literal">his</span>.<span class="ST2">complementario</span>) == Double.<span class="ST4">doubleToLongBits</span>(other.<span class="ST2">complementario</span>);
+67     }
+68 
+69 }
+70 
+</pre></body>
+</html>

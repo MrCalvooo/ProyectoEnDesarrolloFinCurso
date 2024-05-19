@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css">
+    <title>Proyecto Iván Montalvo</title>
+</head>
+
+<body>
+    <div>
+        <h1 class="h1">Contexto</h1>
+        <p>
+            Se trata de un programa de gestión empresarial de un concesionario de coches de la marca Koenigsegg
+        </p>
+        <p>
+            Este programa es el programa de gestión del jefe del concesionario desde el cual podremos gestionar
+            clientes, empleados y vehiculos
+        </p>
+    </div>
+
+    <div>
+        <h2 class="h2">Datos tecnicos</h2>
+        <p>
+            Se ha usado una herencia de 2 clases padres llamadas Persona y Vehiculo:
+        <ul class="clases">
+            <li>Persona: 5 clases heredan de ella</li>
+            <li>Vehiculo: 1 clase hereda de ella</li>
+        </ul>
+        En cuanto a herramientas, se han usado:
+        <ol class="herramientas">
+            <li><a id="HashSet" href="https://docs.oracle.com/javase/8/docs/api/java/util/HashSet.html">HashSet</a></li>
+            <li><a id="LinkedList" href="https://docs.oracle.com/javase/8/docs/api/java/util/LinkedList.html">LinkedList</a></li>
+            <li><a id="List" href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html">List</a></li>
+            <li><a id="Map" href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html">Map</a></li>
+            <li><a id="Scanner" href="https://docs.oracle.com/javase/8/docs/api/java/util/Scanner.html">Scanner</a></li>
+            <li><a id="Set" href="https://docs.oracle.com/javase/8/docs/api/java/util/Set.html">Set</a></li>
+            <li><a id="TreeMap" href="https://docs.oracle.com/javase/8/docs/api/java/util/TreeMap.html">TreeMap</a></li>
+        </ol>
+        </p>
+        <p class="explicacion">
+            A la hora de ejecucion del programa, se instancian varios objetos
+            de las clases anteriores para poder simular la existencia de clientes,
+            gerentes, vendedores, jefe y varios vehiculos de distintos modelos con sus respectivos datos
+            diferenciados los del mismo modelo por su color
+        </p>
+        <p>
+            El programa, antes de poder hacer nada, te obliga a escribir la contraseña de acceso (esto paras simular
+            una pequeña seguridad basica en todos los sistemas de gestión). Si la contraseña es correcta, entonces ya
+            podemos empezar
+            a hacer las gestiones:
+        <ol class="funciones">
+            <li>Añadir clientes</li>
+            <li>Gestionar empleados</li>
+            <li>Gestionar coches</li>
+            <li>Cambiar la contraseña</li>
+        </ol>
+        </p>
+        <p>
+        <h3 id="clientes">Añadir clientes</h3>
+        Esta opcion nos empieza a pedir datos (nombre, apellidos, DNI, etc) para poder almacenarlos en variables las
+        cuales
+        después seran usadas. Una vez todos los datos hayan sido rellenados, se empezara a crear el nuevo objeto de
+        clientes
+        dando de valores a sus atributos las variables que contienen los datos introducidos anteriormente por el
+        usuario.
+        </p>
+        <p>
+        <h3 id="empleados">Gestionar empleados</h3>
+        <ol>
+            <li>Gestionar vendedores: con esta subopcion tenemos otras 2 subopciones mas:
+                <ul>
+                    <li>Añadir vendedores: esta opcion nos pedira otra vez datos a introducir por el usuario los cuales
+                        se almacenaran en variables para luego al crear el nuevo vendedor,
+                        estas variables definan los atributos del objeto
+                    </li>
+                    <li>Eliminar vendedores: se introduce el nombre del vendedor a eliminar, se busca en la lista y si
+                        ese vendedor existe se elimina automaticamente del sistema</li>
+                </ul>
+            </li>
+            <li>Gestionar gerentes:
+                <ul>
+                    <li>Añadir gerentes: mismo procedimiento como el de añadir vendedores</li>
+                    <li>Eliminar gerentes: mismo procedimiento como el de eliminar vendedores pero en la lista de
+                        gerentes</li>
+                </ul>
+            </li>
+        </ol>
+        </p>
+        <p>
+        <h3 id="vehiculos">Gestionar vehiculos</h3>
+        <ol>
+            <li>Añadir coche: mismo procedimiento como el de añadir vendedores pero con bastantes mas datos al pedirse
+                datos como el modelo, motor, ruedas, altura, anchura, etc</li>
+            <li>Eliminar coche: mismo procedimiento como el de eliminar vendedores pero en la lista de coches</li>
+        </ol>
+        </p>
+        <p>
+        <h3 id="contraseña">Cambiar contraseña</h3>
+        Se pedira la contraseña actual para hacer una verificacion, si la contraseña coincide entonces se pide al
+        usuario introducir la nueva contraseña y asi cambiamos el valor de la contraseña
+        </p>
+    </div>
+    <div>
+        <h4 class="h4">Acceso directo a la visualizacion de clases</h4>
+        <a id="acceso" href="./Clases/accesoClases.html">Pinche aqui</a>
+        <br>
+        <br>
+        <br>
+        <a href="./main/main.html">Codigo fuente del main</a>
+    </div>
+</body>
+
+</html>

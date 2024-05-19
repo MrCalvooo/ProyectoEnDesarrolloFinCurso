@@ -1,0 +1,494 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<title>DAM1MontalvoDaSilva_Ivan_Ej099950MiProyectoUT09.java</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<style type="text/css">
+<!--
+body {color: #a9b7c6; background-color: #2b2b2b; font-family: monospace}
+pre {color: #a9b7c6; background-color: #2b2b2b; font-family: monospace}
+table {color: #888888; background-color: #313335; font-family: monospace}
+.literal {color: #cc7832}
+.ST5 {font-family: monospace; font-style: italic}
+.ST0 {color: #287bde}
+.string {color: #6a8759}
+.number {color: #6897bb}
+.comment {color: #808080}
+.whitespace {color: #505050}
+.ST3 {color: #ffc66d; font-family: monospace; font-style: italic}
+.ST4 {color: #9876aa; font-family: monospace; font-style: italic}
+.ST1 {color: #808080; font-family: monospace; font-weight: bold}
+.ST2 {color: #8a653b}
+-->
+</style>
+</head>
+<body>
+<table width="100%"><tr><td align="center">/media/sf_PROGRAMACION/Ejercicios/UT9/Proyecto/DAM1MontalvoDaSilva_Ivan_Ej099950MiProyectoUT09/src/dam1montalvodasilva_ivan_ej099950miproyectout09/DAM1MontalvoDaSilva_Ivan_Ej099950MiProyectoUT09.java</td></tr></table>
+<pre>
+  1 <span class="comment">/*</span>
+  2 <span class="comment"> * Click </span><span class="ST0">nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt</span><span class="comment"> to change this license</span>
+  3 <span class="comment"> * Click </span><span class="ST0">nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java</span><span class="comment"> to edit this template</span>
+  4 <span class="comment"> */</span>
+  5 <span class="literal">package</span> dam1montalvodasilva_ivan_ej099950miproyectout09;
+  6 
+  7 <span class="literal">import</span> java.util.HashSet;
+  8 <span class="literal">import</span> java.util.LinkedList;
+  9 <span class="literal">import</span> java.util.List;
+ 10 <span class="literal">import</span> java.util.Map;
+ 11 <span class="literal">import</span> java.util.Scanner;
+ 12 <span class="literal">import</span> java.util.Set;
+ 13 <span class="literal">import</span> java.util.TreeMap;
+ 14 
+ 15 <span class="comment">/**</span>
+ 16 <span class="comment"> *</span>
+ 17 <span class="comment"> * </span><span class="ST1">@author</span> <span class="comment">alumno</span>
+ 18  <span class="comment">*/</span>
+ 19 <span class="literal">public</span> <span class="literal">class</span> DAM1MontalvoDaSilva_Ivan_Ej099950MiProyectoUT09 {
+ 20 
+ 21     <span class="comment">/**</span>
+ 22 <span class="comment">     * </span><span class="ST1">@param</span> <span class="ST2">args</span> <span class="comment">the</span> <span class="comment">command</span> <span class="comment">line</span> <span class="comment">arguments</span>
+ 23      <span class="comment">*/</span>
+ 24     <span class="literal">public</span> <span class="literal">static</span> <span class="literal">void</span> <span class="ST3">main</span>(String[] args) {
+ 25         Scanner scan = <span class="literal">new</span> Scanner(System.<span class="ST4">in</span>);
+ 26 
+ 27         System.<span class="ST4">out</span>.println(<span class="string">&quot;</span><span class="string">Gestor del concesionario Koenigsegg</span><span class="string">&quot;</span>);
+ 28 
+ 29         Persona jefe = <span class="literal">new</span> Jefe(<span class="number">2</span><span class="number">000.54</span>, <span class="string">&quot;</span><span class="string">Marcos</span><span class="string">&quot;</span>, <span class="string">&quot;</span><span class="string">0874658T</span><span class="string">&quot;</span>, <span class="string">&quot;</span><span class="string">Ruiz</span><span class="string">&quot;</span>, <span class="number">4</span><span class="number">9</span>, <span class="number">5</span><span class="number">574.33</span>);
+ 30 
+ 31         <span class="comment">//Gerentes</span>
+ 32         Gerente lorena = <span class="literal">new</span> Gerente((Jefe) jefe, <span class="number">5</span><span class="number">00.45</span>, <span class="number">1</span><span class="number">0</span>, <span class="string">&quot;</span><span class="string">Lorena</span><span class="string">&quot;</span>, <span class="string">&quot;</span><span class="string">09748692H</span><span class="string">&quot;</span>, <span class="string">&quot;</span><span class="string">Pallares</span><span class="string">&quot;</span>, <span class="number">4</span><span class="number">5</span>, <span class="number">2</span><span class="number">000.45</span>);
+ 33         Gerente pepe = <span class="literal">new</span> Gerente((Jefe) jefe, <span class="number">3</span><span class="number">00.45</span>, <span class="number">2</span><span class="number">0</span>, <span class="string">&quot;</span><span class="string">Pepe</span><span class="string">&quot;</span>, <span class="string">&quot;</span><span class="string">08111497P</span><span class="string">&quot;</span>, <span class="string">&quot;</span><span class="string">Parrado</span><span class="string">&quot;</span>, <span class="number">4</span><span class="number">0</span>, <span class="number">3</span><span class="number">000.84</span>);
+ 34         Gerente laura = <span class="literal">new</span> Gerente((Jefe) jefe, <span class="number">2</span><span class="number">00.00</span>, <span class="number">3</span><span class="number">3</span>, <span class="string">&quot;</span><span class="string">Laura</span><span class="string">&quot;</span>, <span class="string">&quot;</span><span class="string">09787692H</span><span class="string">&quot;</span>, <span class="string">&quot;</span><span class="string">Ruíz</span><span class="string">&quot;</span>, <span class="number">3</span><span class="number">5</span>, <span class="number">1</span><span class="number">937.79</span>);
+ 35         Gerente alberto = <span class="literal">new</span> Gerente((Jefe) jefe, <span class="number">2</span><span class="number">10.87</span>, <span class="number">3</span><span class="number">4</span>, <span class="string">&quot;</span><span class="string">Alberto</span><span class="string">&quot;</span>, <span class="string">&quot;</span><span class="string">09718692H</span><span class="string">&quot;</span>, <span class="string">&quot;</span><span class="string">Manchego</span><span class="string">&quot;</span>, <span class="number">3</span><span class="number">6</span>, <span class="number">1</span><span class="number">940.21</span>);
+ 36         Gerente sofia = <span class="literal">new</span> Gerente((Jefe) jefe, <span class="number">4</span><span class="number">59.78</span>, <span class="number">1</span><span class="number">1</span>, <span class="string">&quot;</span><span class="string">Sofía</span><span class="string">&quot;</span>, <span class="string">&quot;</span><span class="string">0870158T</span><span class="string">&quot;</span>, <span class="string">&quot;</span><span class="string">Gallardo</span><span class="string">&quot;</span>, <span class="number">4</span><span class="number">3</span>, <span class="number">2</span><span class="number">948.67</span>);
+ 37 
+ 38         <span class="comment">//Vendedores</span>
+ 39         Vendedor ana = <span class="literal">new</span> Vendedor((Gerente) pepe, <span class="number">5</span><span class="number">0</span>, <span class="string">&quot;</span><span class="string">Ana</span><span class="string">&quot;</span>, <span class="string">&quot;</span><span class="string">09084348H</span><span class="string">&quot;</span>, <span class="string">&quot;</span><span class="string">Garrido</span><span class="string">&quot;</span>, <span class="number">2</span><span class="number">6</span>, <span class="number">1</span><span class="number">220.87</span>);
+ 40         Vendedor antonio = <span class="literal">new</span> Vendedor((Gerente) pepe, <span class="number">5</span><span class="number">1</span>, <span class="string">&quot;</span><span class="string">Antonio</span><span class="string">&quot;</span>, <span class="string">&quot;</span><span class="string">08974365H</span><span class="string">&quot;</span>, <span class="string">&quot;</span><span class="string">Garcia</span><span class="string">&quot;</span>, <span class="number">2</span><span class="number">8</span>, <span class="number">1</span><span class="number">300.15</span>);
+ 41         Vendedor javier = <span class="literal">new</span> Vendedor((Gerente) laura, <span class="number">5</span><span class="number">2</span>, <span class="string">&quot;</span><span class="string">Javier</span><span class="string">&quot;</span>, <span class="string">&quot;</span><span class="string">08964365P</span><span class="string">&quot;</span>, <span class="string">&quot;</span><span class="string">Blasco</span><span class="string">&quot;</span>, <span class="number">3</span><span class="number">1</span>, <span class="number">1</span><span class="number">284.62</span>);
+ 42         Vendedor ivan = <span class="literal">new</span> Vendedor((Gerente) laura, <span class="number">5</span><span class="number">3</span>, <span class="string">&quot;</span><span class="string">Iván</span><span class="string">&quot;</span>, <span class="string">&quot;</span><span class="string">09096348T</span><span class="string">&quot;</span>, <span class="string">&quot;</span><span class="string">Fernández</span><span class="string">&quot;</span>, <span class="number">2</span><span class="number">5</span>, <span class="number">1</span><span class="number">220.0</span>);
+ 43         Vendedor alba = <span class="literal">new</span> Vendedor((Gerente) alberto, <span class="number">5</span><span class="number">4</span>, <span class="string">&quot;</span><span class="string">Alba</span><span class="string">&quot;</span>, <span class="string">&quot;</span><span class="string">0896253F</span><span class="string">&quot;</span>, <span class="string">&quot;</span><span class="string">González</span><span class="string">&quot;</span>, <span class="number">3</span><span class="number">2</span>, <span class="number">1</span><span class="number">436.56</span>);
+ 44         Vendedor alma = <span class="literal">new</span> Vendedor((Gerente) alberto, <span class="number">5</span><span class="number">5</span>, <span class="string">&quot;</span><span class="string">Alma</span><span class="string">&quot;</span>, <span class="string">&quot;</span><span class="string">0900537S</span><span class="string">&quot;</span>, <span class="string">&quot;</span><span class="string">Carmona</span><span class="string">&quot;</span>, <span class="number">2</span><span class="number">5</span>, <span class="number">1</span><span class="number">267.31</span>);
+ 45         Vendedor daniel = <span class="literal">new</span> Vendedor((Gerente) sofia, <span class="number">5</span><span class="number">6</span>, <span class="string">&quot;</span><span class="string">Daniel</span><span class="string">&quot;</span>, <span class="string">&quot;</span><span class="string">09023467G</span><span class="string">&quot;</span>, <span class="string">&quot;</span><span class="string">Moreno</span><span class="string">&quot;</span>, <span class="number">2</span><span class="number">3</span>, <span class="number">1</span><span class="number">242.34</span>);
+ 46         Vendedor dario = <span class="literal">new</span> Vendedor((Gerente) sofia, <span class="number">5</span><span class="number">7</span>, <span class="string">&quot;</span><span class="string">Dario</span><span class="string">&quot;</span>, <span class="string">&quot;</span><span class="string">0897884L</span><span class="string">&quot;</span>, <span class="string">&quot;</span><span class="string">Munuera</span><span class="string">&quot;</span>, <span class="number">3</span><span class="number">2</span>, <span class="number">1</span><span class="number">397.58</span>);
+ 47 
+ 48         <span class="comment">//Clientes</span>
+ 49         Cliente cliente1 = <span class="literal">new</span> Cliente(<span class="number">5</span><span class="number">00000.49</span>, <span class="string">&quot;</span><span class="string">Andres</span><span class="string">&quot;</span>, <span class="string">&quot;</span><span class="string">08784096G</span><span class="string">&quot;</span>, <span class="string">&quot;</span><span class="string">Pérez</span><span class="string">&quot;</span>, <span class="number">5</span><span class="number">5</span>);
+ 50         Cliente cliente2 = <span class="literal">new</span> Cliente(<span class="number">1</span><span class="number">000000.0</span>, <span class="string">&quot;</span><span class="string">Benito</span><span class="string">&quot;</span>, <span class="string">&quot;</span><span class="string">08974183B</span><span class="string">&quot;</span>, <span class="string">&quot;</span><span class="string">Galdós</span><span class="string">&quot;</span>, <span class="number">3</span><span class="number">4</span>);
+ 51         Cliente cliente3 = <span class="literal">new</span> Cliente(<span class="number">7</span><span class="number">49687.123</span>, <span class="string">&quot;</span><span class="string">Andrea</span><span class="string">&quot;</span>, <span class="string">&quot;</span><span class="string">09098736T</span><span class="string">&quot;</span>, <span class="string">&quot;</span><span class="string">Cals</span><span class="string">&quot;</span>, <span class="number">3</span><span class="number">7</span>);
+ 52         Cliente cliente4 = <span class="literal">new</span> Cliente(<span class="number">0</span>, <span class="string">&quot;</span><span class="string">Sara</span><span class="string">&quot;</span>, <span class="string">&quot;</span><span class="string">09110587C</span><span class="string">&quot;</span>, <span class="string">&quot;</span><span class="string">Cuenca</span><span class="string">&quot;</span>, <span class="number">2</span><span class="number">6</span>);
+ 53         Cliente cliente5 = <span class="literal">new</span> Cliente(<span class="number">0</span>, <span class="string">&quot;</span><span class="string">Álvaro</span><span class="string">&quot;</span>, <span class="string">&quot;</span><span class="string">09110241L</span><span class="string">&quot;</span>, <span class="string">&quot;</span><span class="string">Domínguez</span><span class="string">&quot;</span>, <span class="number">2</span><span class="number">8</span>);
+ 54 
+ 55         <span class="comment">/*Coches*/</span>
+ 56         <span class="comment">//Regera</span>
+ 57         Vehiculo regera1 = <span class="literal">new</span> Coche(<span class="number">3</span>, <span class="string">&quot;</span><span class="string">Regera</span><span class="string">&quot;</span>, <span class="number">8</span>, <span class="number">2</span><span class="number">5.0</span>, <span class="number">1</span>, <span class="string">&quot;</span><span class="string">Negro</span><span class="string">&quot;</span>, <span class="string">&quot;</span><span class="string">V8</span><span class="string">&quot;</span>, <span class="number">4</span>, <span class="number">2</span>, <span class="number">1</span><span class="number">.11</span>, <span class="number">2</span><span class="number">.05</span>, <span class="string">&quot;</span><span class="string">Gasolina</span><span class="string">&quot;</span>, <span class="number">5</span>, <span class="number">4</span><span class="number">10</span>, <span class="number">3</span><span class="number">900000</span>);
+ 58         Vehiculo regera2 = <span class="literal">new</span> Coche(<span class="number">3</span>, <span class="string">&quot;</span><span class="string">Regera</span><span class="string">&quot;</span>, <span class="number">8</span>, <span class="number">2</span><span class="number">5.0</span>, <span class="number">2</span>, <span class="string">&quot;</span><span class="string">Rojo</span><span class="string">&quot;</span>, <span class="string">&quot;</span><span class="string">V8</span><span class="string">&quot;</span>, <span class="number">4</span>, <span class="number">2</span>, <span class="number">1</span><span class="number">.11</span>, <span class="number">2</span><span class="number">.05</span>, <span class="string">&quot;</span><span class="string">Gasolina</span><span class="string">&quot;</span>, <span class="number">5</span>, <span class="number">4</span><span class="number">10</span>, <span class="number">3</span><span class="number">900000</span>);
+ 59         Vehiculo regera3 = <span class="literal">new</span> Coche(<span class="number">3</span>, <span class="string">&quot;</span><span class="string">Regera</span><span class="string">&quot;</span>, <span class="number">8</span>, <span class="number">2</span><span class="number">5.0</span>, <span class="number">3</span>, <span class="string">&quot;</span><span class="string">Azúl</span><span class="string">&quot;</span>, <span class="string">&quot;</span><span class="string">V8</span><span class="string">&quot;</span>, <span class="number">4</span>, <span class="number">2</span>, <span class="number">1</span><span class="number">.11</span>, <span class="number">2</span><span class="number">.05</span>, <span class="string">&quot;</span><span class="string">Gasolina</span><span class="string">&quot;</span>, <span class="number">5</span>, <span class="number">4</span><span class="number">10</span>, <span class="number">3</span><span class="number">900000</span>);
+ 60         Vehiculo regera4 = <span class="literal">new</span> Coche(<span class="number">3</span>, <span class="string">&quot;</span><span class="string">Regera</span><span class="string">&quot;</span>, <span class="number">8</span>, <span class="number">2</span><span class="number">5.0</span>, <span class="number">4</span>, <span class="string">&quot;</span><span class="string">Amarillo</span><span class="string">&quot;</span>, <span class="string">&quot;</span><span class="string">V8</span><span class="string">&quot;</span>, <span class="number">4</span>, <span class="number">2</span>, <span class="number">1</span><span class="number">.11</span>, <span class="number">2</span><span class="number">.05</span>, <span class="string">&quot;</span><span class="string">Gasolina</span><span class="string">&quot;</span>, <span class="number">5</span>, <span class="number">4</span><span class="number">10</span>, <span class="number">3</span><span class="number">900000</span>);
+ 61         Vehiculo regera5 = <span class="literal">new</span> Coche(<span class="number">3</span>, <span class="string">&quot;</span><span class="string">Regera</span><span class="string">&quot;</span>, <span class="number">8</span>, <span class="number">2</span><span class="number">5.0</span>, <span class="number">5</span>, <span class="string">&quot;</span><span class="string">Morado</span><span class="string">&quot;</span>, <span class="string">&quot;</span><span class="string">V8</span><span class="string">&quot;</span>, <span class="number">4</span>, <span class="number">2</span>, <span class="number">1</span><span class="number">.11</span>, <span class="number">2</span><span class="number">.05</span>, <span class="string">&quot;</span><span class="string">Gasolina</span><span class="string">&quot;</span>, <span class="number">5</span>, <span class="number">4</span><span class="number">10</span>, <span class="number">3</span><span class="number">900000</span>);
+ 62 
+ 63         <span class="comment">//Agera</span>
+ 64         Vehiculo agera1 = <span class="literal">new</span> Coche(<span class="number">3</span>, <span class="string">&quot;</span><span class="string">Agera</span><span class="string">&quot;</span>, <span class="number">8</span>, <span class="number">2</span><span class="number">5.0</span>, <span class="number">6</span>, <span class="string">&quot;</span><span class="string">Amarillo</span><span class="string">&quot;</span>, <span class="string">&quot;</span><span class="string">V8</span><span class="string">&quot;</span>, <span class="number">4</span>, <span class="number">4</span>, <span class="number">1</span><span class="number">.12</span>, <span class="number">1</span><span class="number">.99</span>, <span class="string">&quot;</span><span class="string">Gasolina</span><span class="string">&quot;</span>, <span class="number">5</span>, <span class="number">4</span><span class="number">47</span>, <span class="number">1</span><span class="number">65000000</span>);
+ 65         Vehiculo agera2 = <span class="literal">new</span> Coche(<span class="number">3</span>, <span class="string">&quot;</span><span class="string">Agera</span><span class="string">&quot;</span>, <span class="number">8</span>, <span class="number">2</span><span class="number">5.0</span>, <span class="number">7</span>, <span class="string">&quot;</span><span class="string">Negro</span><span class="string">&quot;</span>, <span class="string">&quot;</span><span class="string">V8</span><span class="string">&quot;</span>, <span class="number">4</span>, <span class="number">4</span>, <span class="number">1</span><span class="number">.12</span>, <span class="number">1</span><span class="number">.99</span>, <span class="string">&quot;</span><span class="string">Gasolina</span><span class="string">&quot;</span>, <span class="number">5</span>, <span class="number">4</span><span class="number">47</span>, <span class="number">1</span><span class="number">65000000</span>);
+ 66         Vehiculo agera3 = <span class="literal">new</span> Coche(<span class="number">3</span>, <span class="string">&quot;</span><span class="string">Agera</span><span class="string">&quot;</span>, <span class="number">8</span>, <span class="number">2</span><span class="number">5.0</span>, <span class="number">8</span>, <span class="string">&quot;</span><span class="string">Blanco</span><span class="string">&quot;</span>, <span class="string">&quot;</span><span class="string">V8</span><span class="string">&quot;</span>, <span class="number">4</span>, <span class="number">4</span>, <span class="number">1</span><span class="number">.12</span>, <span class="number">1</span><span class="number">.99</span>, <span class="string">&quot;</span><span class="string">Gasolina</span><span class="string">&quot;</span>, <span class="number">5</span>, <span class="number">4</span><span class="number">47</span>, <span class="number">1</span><span class="number">65000000</span>);
+ 67         Vehiculo agera4 = <span class="literal">new</span> Coche(<span class="number">3</span>, <span class="string">&quot;</span><span class="string">Agera</span><span class="string">&quot;</span>, <span class="number">8</span>, <span class="number">2</span><span class="number">5.0</span>, <span class="number">9</span>, <span class="string">&quot;</span><span class="string">Gris</span><span class="string">&quot;</span>, <span class="string">&quot;</span><span class="string">V8</span><span class="string">&quot;</span>, <span class="number">4</span>, <span class="number">4</span>, <span class="number">1</span><span class="number">.12</span>, <span class="number">1</span><span class="number">.99</span>, <span class="string">&quot;</span><span class="string">Gasolina</span><span class="string">&quot;</span>, <span class="number">5</span>, <span class="number">4</span><span class="number">47</span>, <span class="number">1</span><span class="number">65000000</span>);
+ 68         Vehiculo agera5 = <span class="literal">new</span> Coche(<span class="number">3</span>, <span class="string">&quot;</span><span class="string">Agera</span><span class="string">&quot;</span>, <span class="number">8</span>, <span class="number">2</span><span class="number">5.0</span>, <span class="number">1</span><span class="number">0</span>, <span class="string">&quot;</span><span class="string">Rojo</span><span class="string">&quot;</span>, <span class="string">&quot;</span><span class="string">V8</span><span class="string">&quot;</span>, <span class="number">4</span>, <span class="number">4</span>, <span class="number">1</span><span class="number">.12</span>, <span class="number">1</span><span class="number">.99</span>, <span class="string">&quot;</span><span class="string">Gasolina</span><span class="string">&quot;</span>, <span class="number">5</span>, <span class="number">4</span><span class="number">47</span>, <span class="number">1</span><span class="number">65000000</span>);
+ 69 
+ 70         <span class="comment">//Jesko</span>
+ 71         Vehiculo jesko1 = <span class="literal">new</span> Coche(<span class="number">2</span>, <span class="string">&quot;</span><span class="string">Jesko</span><span class="string">&quot;</span>, <span class="number">6</span>, <span class="number">0</span><span class="number">.</span>, <span class="number">1</span><span class="number">1</span>, <span class="string">&quot;</span><span class="string">Negro</span><span class="string">&quot;</span>, <span class="string">&quot;</span><span class="string">V8 biturbo</span><span class="string">&quot;</span>, <span class="number">4</span>, <span class="number">2</span>, <span class="number">1</span><span class="number">.2</span>, <span class="number">2</span><span class="number">.03</span>, <span class="string">&quot;</span><span class="string">Gasolina</span><span class="string">&quot;</span>, <span class="number">5</span>, <span class="number">0</span>, <span class="number">3</span><span class="number">000000</span>);
+ 72         Vehiculo jesko2 = <span class="literal">new</span> Coche(<span class="number">2</span>, <span class="string">&quot;</span><span class="string">Jesko</span><span class="string">&quot;</span>, <span class="number">6</span>, <span class="number">0</span><span class="number">.</span>, <span class="number">1</span><span class="number">2</span>, <span class="string">&quot;</span><span class="string">Amarillo</span><span class="string">&quot;</span>, <span class="string">&quot;</span><span class="string">V8 biturbo</span><span class="string">&quot;</span>, <span class="number">4</span>, <span class="number">2</span>, <span class="number">1</span><span class="number">.2</span>, <span class="number">2</span><span class="number">.03</span>, <span class="string">&quot;</span><span class="string">Gasolina</span><span class="string">&quot;</span>, <span class="number">5</span>, <span class="number">0</span>, <span class="number">3</span><span class="number">000000</span>);
+ 73         Vehiculo jesko3 = <span class="literal">new</span> Coche(<span class="number">2</span>, <span class="string">&quot;</span><span class="string">Jesko</span><span class="string">&quot;</span>, <span class="number">6</span>, <span class="number">0</span><span class="number">.</span>, <span class="number">1</span><span class="number">3</span>, <span class="string">&quot;</span><span class="string">Gris</span><span class="string">&quot;</span>, <span class="string">&quot;</span><span class="string">V8 biturbo</span><span class="string">&quot;</span>, <span class="number">4</span>, <span class="number">2</span>, <span class="number">1</span><span class="number">.2</span>, <span class="number">2</span><span class="number">.03</span>, <span class="string">&quot;</span><span class="string">Gasolina</span><span class="string">&quot;</span>, <span class="number">5</span>, <span class="number">0</span>, <span class="number">3</span><span class="number">000000</span>);
+ 74         Vehiculo jesko4 = <span class="literal">new</span> Coche(<span class="number">2</span>, <span class="string">&quot;</span><span class="string">Jesko</span><span class="string">&quot;</span>, <span class="number">6</span>, <span class="number">0</span><span class="number">.</span>, <span class="number">1</span><span class="number">4</span>, <span class="string">&quot;</span><span class="string">Rojo</span><span class="string">&quot;</span>, <span class="string">&quot;</span><span class="string">V8 biturbo</span><span class="string">&quot;</span>, <span class="number">4</span>, <span class="number">2</span>, <span class="number">1</span><span class="number">.2</span>, <span class="number">2</span><span class="number">.03</span>, <span class="string">&quot;</span><span class="string">Gasolina</span><span class="string">&quot;</span>, <span class="number">5</span>, <span class="number">0</span>, <span class="number">3</span><span class="number">000000</span>);
+ 75         Vehiculo jesko5 = <span class="literal">new</span> Coche(<span class="number">2</span>, <span class="string">&quot;</span><span class="string">Jesko</span><span class="string">&quot;</span>, <span class="number">6</span>, <span class="number">0</span><span class="number">.</span>, <span class="number">1</span><span class="number">5</span>, <span class="string">&quot;</span><span class="string">Azúl</span><span class="string">&quot;</span>, <span class="string">&quot;</span><span class="string">V8 biturbo</span><span class="string">&quot;</span>, <span class="number">4</span>, <span class="number">2</span>, <span class="number">1</span><span class="number">.2</span>, <span class="number">2</span><span class="number">.03</span>, <span class="string">&quot;</span><span class="string">Gasolina</span><span class="string">&quot;</span>, <span class="number">5</span>, <span class="number">0</span>, <span class="number">3</span><span class="number">000000</span>);
+ 76 
+ 77         <span class="comment">//Colecciones</span>
+ 78         Set&lt;Cliente&gt; setClientes = <span class="literal">new</span> HashSet&lt;&gt;();
+ 79 
+ 80         Set&lt;Empleado&gt; setEmpleados = <span class="literal">new</span> HashSet&lt;&gt;();
+ 81 
+ 82         Set&lt;Vehiculo&gt; setVehiculos = <span class="literal">new</span> HashSet&lt;&gt;();
+ 83 
+ 84         <span class="comment">//Listas</span>
+ 85         List listaClientes = <span class="literal">new</span> LinkedList(setClientes);
+ 86 
+ 87         List listaVendedores = <span class="literal">new</span> LinkedList(setEmpleados);
+ 88 
+ 89         List listaGerentes = <span class="literal">new</span> LinkedList(setEmpleados);
+ 90 
+ 91         List listaCoches = <span class="literal">new</span> LinkedList(setVehiculos);
+ 92 
+ 93         <span class="comment">//Mapas</span>
+ 94         Map&lt;Integer, Vendedor&gt; <span class="comment">mapaVendedores</span> = <span class="literal">new</span> TreeMap&lt;&gt;();
+ 95 
+ 96         Map&lt;Integer, Gerente&gt; <span class="comment">mapaGerentes</span> = <span class="literal">new</span> TreeMap&lt;&gt;();
+ 97 
+ 98         <span class="comment">/*Listas*/</span>
+ 99         <span class="comment">//Añadir gerentes</span>
+100         listaGerentes.add(lorena);
+101         listaGerentes.add(pepe);
+102         listaGerentes.add(laura);
+103         listaGerentes.add(alberto);
+104         listaGerentes.add(sofia);
+105 
+106         <span class="comment">//Añadir vendedores</span>
+107         listaVendedores.add(ana);
+108         listaVendedores.add(antonio);
+109         listaVendedores.add(javier);
+110         listaVendedores.add(ivan);
+111         listaVendedores.add(alba);
+112         listaVendedores.add(alma);
+113         listaVendedores.add(daniel);
+114         listaVendedores.add(dario);
+115 
+116         <span class="comment">//Añadir clientes</span>
+117         listaClientes.add(cliente1);
+118         listaClientes.add(cliente2);
+119         listaClientes.add(cliente3);
+120         listaClientes.add(cliente4);
+121         listaClientes.add(cliente5);
+122 
+123         <span class="comment">//Añadir coches</span>
+124         <span class="comment">//Ageras</span>
+125         listaCoches.add(agera1);
+126         listaCoches.add(agera2);
+127         listaCoches.add(agera3);
+128         listaCoches.add(agera4);
+129         listaCoches.add(agera5);
+130 
+131         <span class="comment">//Regeras</span>
+132         listaCoches.add(regera1);
+133         listaCoches.add(regera2);
+134         listaCoches.add(regera3);
+135         listaCoches.add(regera4);
+136         listaCoches.add(regera5);
+137 
+138         <span class="comment">//Jeskos</span>
+139         listaCoches.add(jesko1);
+140         listaCoches.add(jesko2);
+141         listaCoches.add(jesko3);
+142         listaCoches.add(jesko4);
+143         listaCoches.add(jesko5);
+144 
+145         <span class="comment">/*Mapas*/</span>
+146         <span class="comment">//Gestion del programa</span>
+147         String anyadirCliente = <span class="string">&quot;&quot;</span>;
+148 
+149         <span class="literal">final</span> <span class="literal">int</span> MAXCLIENTES = <span class="number">99</span>;
+150 
+151         <span class="literal">int</span> contadorClientes = <span class="number">5</span>;
+152 
+153         <span class="comment">//METER EXCEPCION</span>
+154         <span class="literal">int</span> eleccion = <span class="number">0</span>;
+155 
+156         String rehacer = <span class="string">&quot;&quot;</span>;
+157 
+158         <span class="literal">int</span> <span class="comment">intentos</span> = <span class="number">3</span>;
+159 
+160         String contrasenya = <span class="string">&quot;</span><span class="string">concesionarioProyecto</span><span class="string">&quot;</span>;
+161 
+162         System.<span class="ST4">out</span>.println(<span class="string">&quot;</span><span class="string">Contraseña: </span><span class="string">&quot;</span>);
+163 
+164         String contrasenyaPedida = scan.nextLine();
+165 
+166         <span class="comment">//Comprobacion de la contraseña</span>
+167         <span class="literal">if</span> (contrasenyaPedida.equals(contrasenya)) {
+168 
+169             <span class="literal">do</span> {
+170                 <span class="literal">try</span> {
+171                     <span class="comment">//Opciones a hacer</span>
+172                     System.<span class="ST4">out</span>.println(<span class="string">&quot;</span><span class="string">1.- Añadir cliente</span><span class="string">&quot;</span>);
+173                     System.<span class="ST4">out</span>.println(<span class="string">&quot;</span><span class="string">2.- Gestionar empleados</span><span class="string">&quot;</span>);
+174                     System.<span class="ST4">out</span>.println(<span class="string">&quot;</span><span class="string">3.- Gestion de coches</span><span class="string">&quot;</span>);
+175                     System.<span class="ST4">out</span>.println(<span class="string">&quot;</span><span class="string">4.- Cambiar contraseña</span><span class="string">&quot;</span>);
+176 
+177                     System.<span class="ST4">out</span>.println(<span class="string">&quot;</span><span class="string">Seleccione la opcion que desea hacer: </span><span class="string">&quot;</span>);
+178                     eleccion = Integer.<span class="ST5">parseInt</span>(scan.nextLine());
+179                     <span class="literal">if</span> (eleccion &lt; <span class="number">1</span> || eleccion &gt; <span class="number">4</span>) {
+180                         <span class="literal">throw</span> <span class="literal">new</span> IllegalArgumentException(<span class="string">&quot;</span><span class="string">Ingrese el numero de las opciones mostradas porfavor</span><span class="string">&quot;</span>);
+181                     }
+182 
+183                     <span class="comment">// Aquí iría el resto del código para manejar la elección del usuario.</span>
+184                 } <span class="literal">catch</span> (NumberFormatException e) {
+185                     System.<span class="ST4">out</span>.println(<span class="string">&quot;</span><span class="string">Ingrese el numero de las opciones mostradas porfavor</span><span class="string">&quot;</span>);
+186                 } <span class="literal">catch</span> (IllegalArgumentException e) {
+187                     System.<span class="ST4">out</span>.println(<span class="string">&quot;</span><span class="string">Error: </span><span class="string">&quot;</span> + e.getMessage());
+188                 }
+189 
+190                 <span class="literal">switch</span> (eleccion) {
+191                     <span class="literal">case</span> <span class="number">1</span> -&gt; {
+192                         <span class="comment">//Bucle do-while para que se repita si se desea meter mas clientes</span>
+193                         <span class="literal">do</span> {
+194                             <span class="literal">try</span> {
+195                                 <span class="comment">// Escaneamos los datos introducidos por el usuario para almacenarlos en variables e instanciarlos luego en el objeto</span>
+196                                 System.<span class="ST4">out</span>.println(<span class="string">&quot;</span><span class="string">Nombre del cliente: </span><span class="string">&quot;</span>);
+197                                 String nombreCliente = scan.nextLine();
+198                                 System.<span class="ST4">out</span>.println(<span class="string">&quot;</span><span class="string">Apellidos: </span><span class="string">&quot;</span>);
+199                                 String apellidosCliente = scan.nextLine();
+200                                 System.<span class="ST4">out</span>.println(<span class="string">&quot;</span><span class="string">DNI: </span><span class="string">&quot;</span>);
+201                                 String dniCliente = scan.nextLine();
+202                                 System.<span class="ST4">out</span>.println(<span class="string">&quot;</span><span class="string">Edad: </span><span class="string">&quot;</span>);
+203                                 String edadCliente = scan.nextLine();
+204                                 <span class="literal">int</span> edadC = Integer.<span class="ST5">parseInt</span>(edadCliente);
+205                                 System.<span class="ST4">out</span>.println(<span class="string">&quot;</span><span class="string">Presupuesto disponible: </span><span class="string">&quot;</span>);
+206                                 String presupuestoCliente = scan.nextLine();
+207                                 <span class="literal">double</span> presCliente = Double.<span class="ST5">parseDouble</span>(presupuestoCliente);
+208 
+209                                 <span class="comment">// Creamos el objeto cliente y metemos los datos introducidos por el usuario almacenados en variables</span>
+210                                 Persona cliente = <span class="literal">new</span> Cliente(presCliente, nombreCliente + contadorClientes++, dniCliente, apellidosCliente, edadC);
+211 
+212                                 <span class="comment">// Añadimos el cliente a la lista de clientes</span>
+213                                 listaClientes.add(cliente);
+214 
+215                                 System.<span class="ST4">out</span>.println(cliente);
+216 
+217                                 <span class="literal">if</span> (contadorClientes &lt; MAXCLIENTES) {
+218                                     System.<span class="ST4">out</span>.println(<span class="string">&quot;</span><span class="string">Desea añadir otro cliente (s/n): </span><span class="string">&quot;</span>);
+219                                     anyadirCliente = scan.nextLine();
+220                                 }
+221                             } <span class="literal">catch</span> (NumberFormatException exception) {
+222                                 System.<span class="ST4">out</span>.println(<span class="string">&quot;</span><span class="string">Ingrese datos correctos</span><span class="string">&quot;</span>);
+223                             }
+224 
+225                         } <span class="literal">while</span> (anyadirCliente.equalsIgnoreCase(<span class="string">&quot;</span><span class="string">s</span><span class="string">&quot;</span>) &amp;&amp; contadorClientes &lt; MAXCLIENTES);
+226 
+227                         System.<span class="ST4">out</span>.println(<span class="string">&quot;</span><span class="string">Datos introducidos correctamente</span><span class="string">&quot;</span>);
+228                     }
+229 
+230                     <span class="literal">case</span> <span class="number">2</span> -&gt; {
+231                         System.<span class="ST4">out</span>.println(<span class="string">&quot;</span><span class="string">1.- Gestionar vendedores</span><span class="literal">\n</span><span class="string">2.- Gestionar gerentes</span><span class="string">&quot;</span>);
+232                         System.<span class="ST4">out</span>.println(<span class="string">&quot;</span><span class="string">Introduzca que desea hacer: </span><span class="string">&quot;</span>);
+233                         eleccion = Integer.<span class="ST5">parseInt</span>(scan.nextLine());
+234 
+235                         <span class="comment">/*Vendedores*/</span>
+236                         <span class="literal">if</span> (eleccion == <span class="number">1</span>) {
+237                             <span class="literal">try</span> {
+238                                 <span class="comment">//Gestion vendedores</span>
+239                                 System.<span class="ST4">out</span>.println(<span class="string">&quot;</span><span class="string">1.- Registrar vendedor</span><span class="literal">\n</span><span class="string">2.- Eliminar vendedor</span><span class="string">&quot;</span>);
+240                                 System.<span class="ST4">out</span>.println(<span class="string">&quot;</span><span class="string">Seleccione que desea hacer con los vendedores: </span><span class="string">&quot;</span>);
+241                                 eleccion = Integer.<span class="ST5">parseInt</span>(scan.nextLine());
+242                             } <span class="literal">catch</span> (NumberFormatException exception) {
+243                                 System.<span class="ST4">out</span>.println(<span class="string">&quot;</span><span class="string">Ingrese los datos correctamente</span><span class="string">&quot;</span>);
+244                             }
+245 
+246                             <span class="comment">//Registro de vendedores</span>
+247                             <span class="literal">if</span> (eleccion == <span class="number">1</span>) {
+248                                 <span class="literal">try</span> {
+249                                     <span class="comment">//Registro vendedores</span>
+250                                     System.<span class="ST4">out</span>.println(<span class="string">&quot;</span><span class="string">Nombre del vendedor: </span><span class="string">&quot;</span>);
+251                                     String nombreVendedor = scan.nextLine();
+252                                     System.<span class="ST4">out</span>.println(<span class="string">&quot;</span><span class="string">Apellidos del vendedor: </span><span class="string">&quot;</span>);
+253                                     String apellidosVendedor = scan.nextLine();
+254                                     System.<span class="ST4">out</span>.println(<span class="string">&quot;</span><span class="string">DNI: </span><span class="string">&quot;</span>);
+255                                     String dniVendedor = scan.nextLine();
+256                                     System.<span class="ST4">out</span>.println(<span class="string">&quot;</span><span class="string">Edad: </span><span class="string">&quot;</span>);
+257                                     <span class="literal">int</span> edadVendedor = Integer.<span class="ST5">parseInt</span>(scan.nextLine());
+258                                     System.<span class="ST4">out</span>.println(<span class="string">&quot;</span><span class="string">Salario a percibir: </span><span class="string">&quot;</span>);
+259                                     <span class="literal">double</span> salarioVendedor = Double.<span class="ST5">parseDouble</span>(scan.nextLine());
+260                                     System.<span class="ST4">out</span>.println(<span class="string">&quot;</span><span class="string">ID: </span><span class="string">&quot;</span>);
+261                                     <span class="literal">int</span> idVendedor = Integer.<span class="ST5">parseInt</span>(scan.nextLine());
+262                                     System.<span class="ST4">out</span>.println(<span class="string">&quot;</span><span class="string">Gerente: </span><span class="string">&quot;</span> + lorena.getNombre());
+263 
+264                                     Persona vendedorNuevo = <span class="literal">new</span> Vendedor((Gerente) lorena, idVendedor, nombreVendedor, dniVendedor, apellidosVendedor, edadVendedor, salarioVendedor);
+265                                     System.<span class="ST4">out</span>.println(vendedorNuevo);
+266                                     listaVendedores.add(vendedorNuevo);
+267                                 } <span class="literal">catch</span> (NumberFormatException exception) {
+268                                     System.<span class="ST4">out</span>.println(<span class="string">&quot;</span><span class="string">Ingrese los datos correctamente</span><span class="string">&quot;</span>);
+269                                 }
+270 
+271                             } <span class="literal">else</span> <span class="literal">if</span> (eleccion == <span class="number">2</span>) {
+272                                 <span class="literal">try</span> {
+273                                     <span class="comment">//Eliminar vendedor</span>
+274                                     System.<span class="ST4">out</span>.println(listaVendedores);
+275                                     System.<span class="ST4">out</span>.println(<span class="string">&quot;</span><span class="string">Nombre del vendedor a eliminar: </span><span class="string">&quot;</span>);
+276                                     String eliminarVendedor = scan.nextLine();
+277                                     <span class="comment">// Verificar si la entrada es de tipo String</span>
+278                                     <span class="literal">if</span> (!eliminarVendedor.matches(<span class="string">&quot;</span><span class="string">[a-zA-Z]+</span><span class="string">&quot;</span>)) {
+279                                         <span class="literal">throw</span> <span class="literal">new</span> IllegalArgumentException(<span class="string">&quot;</span><span class="string">Ingresar un nombre de vendedor válido.</span><span class="string">&quot;</span>);
+280                                     }
+281                                     <span class="literal">if</span> (listaVendedores.contains(eliminarVendedor)) {
+282                                         listaVendedores.remove(eliminarVendedor);
+283                                         System.<span class="ST4">out</span>.println(<span class="string">&quot;</span><span class="string">Vendedor eliminado</span><span class="string">&quot;</span>);
+284                                     } <span class="literal">else</span> {
+285                                         System.<span class="ST4">out</span>.println(<span class="string">&quot;</span><span class="string">No existe ese vendedor</span><span class="string">&quot;</span>);
+286                                     }
+287                                 } <span class="literal">catch</span> (IllegalArgumentException e) {
+288                                     System.<span class="ST4">out</span>.println(<span class="string">&quot;</span><span class="string">Porfavor meta un nombre valido</span><span class="string">&quot;</span>);
+289                                 }
+290                             }
+291 
+292                             <span class="comment">/*Gestion gerentes*/</span>
+293                         } <span class="literal">else</span> <span class="literal">if</span> (eleccion == <span class="number">2</span>) {
+294                             <span class="literal">try</span> {
+295                                 System.<span class="ST4">out</span>.println(<span class="string">&quot;</span><span class="string">1.- Registrar gerente</span><span class="literal">\n</span><span class="string">2.- Eliminar gerente</span><span class="string">&quot;</span>);
+296                                 System.<span class="ST4">out</span>.println(<span class="string">&quot;</span><span class="string">Seleccione que desea hacer con los gerentes: </span><span class="string">&quot;</span>);
+297                                 eleccion = Integer.<span class="ST5">parseInt</span>(scan.nextLine());
+298                             } <span class="literal">catch</span> (NumberFormatException exception) {
+299                                 System.<span class="ST4">out</span>.println(<span class="string">&quot;</span><span class="string">Ingrese los datos correctamente</span><span class="string">&quot;</span>);
+300                             }
+301 
+302                             <span class="literal">if</span> (eleccion == <span class="number">1</span>) {
+303                                 <span class="literal">try</span> {
+304                                     <span class="comment">//Registrar gerente</span>
+305                                     System.<span class="ST4">out</span>.println(<span class="string">&quot;</span><span class="string">Nombre del gerente: </span><span class="string">&quot;</span>);
+306                                     String nombreGerente = scan.nextLine();
+307                                     System.<span class="ST4">out</span>.println(<span class="string">&quot;</span><span class="string">Apellidos del gerente: </span><span class="string">&quot;</span>);
+308                                     String apellidosGerente = scan.nextLine();
+309                                     System.<span class="ST4">out</span>.println(<span class="string">&quot;</span><span class="string">DNI: </span><span class="string">&quot;</span>);
+310                                     String dniGerente = scan.nextLine();
+311                                     System.<span class="ST4">out</span>.println(<span class="string">&quot;</span><span class="string">Edad: </span><span class="string">&quot;</span>);
+312                                     <span class="literal">int</span> edadGerente = Integer.<span class="ST5">parseInt</span>(scan.nextLine());
+313                                     System.<span class="ST4">out</span>.println(<span class="string">&quot;</span><span class="string">Salario a percibir: </span><span class="string">&quot;</span>);
+314                                     <span class="literal">double</span> salarioGerente = Double.<span class="ST5">parseDouble</span>(scan.nextLine());
+315                                     System.<span class="ST4">out</span>.println(<span class="string">&quot;</span><span class="string">ID: </span><span class="string">&quot;</span>);
+316                                     <span class="literal">int</span> idGerente = Integer.<span class="ST5">parseInt</span>(scan.nextLine());
+317                                     System.<span class="ST4">out</span>.println(<span class="string">&quot;</span><span class="string">Complemento: </span><span class="string">&quot;</span>);
+318                                     Double complementoGerente = Double.<span class="ST5">valueOf</span>(scan.nextLine());
+319                                     System.<span class="ST4">out</span>.println(<span class="string">&quot;</span><span class="string">Jefe: </span><span class="string">&quot;</span> + jefe.getNombre());
+320 
+321                                     <span class="comment">//Creamos nuevo gerente</span>
+322                                     Persona gerenteNuevo = <span class="literal">new</span> Gerente((Jefe) jefe, complementoGerente, idGerente, nombreGerente, dniGerente, apellidosGerente, edadGerente, salarioGerente);
+323 
+324                                     <span class="comment">//Añadimos el nuevo gerente</span>
+325                                     listaVendedores.add(gerenteNuevo);
+326                                 } <span class="literal">catch</span> (NumberFormatException exception) {
+327                                     System.<span class="ST4">out</span>.println(<span class="string">&quot;</span><span class="string">Ingrese los datos correctamente</span><span class="string">&quot;</span>);
+328                                 }
+329 
+330                             } <span class="literal">else</span> <span class="literal">if</span> (eleccion == <span class="number">2</span>) {
+331                                 <span class="literal">try</span> {<span class="comment">//Eliminar gerente</span>
+332                                     System.<span class="ST4">out</span>.println(listaGerentes);
+333                                     System.<span class="ST4">out</span>.println(<span class="string">&quot;</span><span class="string">Nombre del gerente a eliminar (minusculas): </span><span class="string">&quot;</span>);
+334                                     String eliminarGerente = scan.nextLine();
+335                                     <span class="literal">if</span> (!eliminarGerente.matches(<span class="string">&quot;</span><span class="string">[a-zA-Z]+</span><span class="string">&quot;</span>)) {
+336                                         <span class="literal">throw</span> <span class="literal">new</span> IllegalArgumentException(<span class="string">&quot;</span><span class="string">Ingresar un nombre de vendedor válido.</span><span class="string">&quot;</span>);
+337                                     }
+338                                     <span class="literal">if</span> (listaVendedores.contains(eliminarGerente)) {
+339                                         listaVendedores.remove(eliminarGerente);
+340                                         System.<span class="ST4">out</span>.println(<span class="string">&quot;</span><span class="string">Gerente eliminado</span><span class="string">&quot;</span>);
+341                                     } <span class="literal">else</span> {
+342                                         System.<span class="ST4">out</span>.println(<span class="string">&quot;</span><span class="string">No existe ese gerente</span><span class="string">&quot;</span>);
+343                                     }
+344                                 } <span class="literal">catch</span> (IllegalArgumentException argumentException) {
+345                                     System.<span class="ST4">out</span>.println(<span class="string">&quot;</span><span class="string">Ingrese gerente valido</span><span class="string">&quot;</span>);
+346                                 }
+347                             }
+348                         }
+349                     }
+350 
+351                     <span class="literal">case</span> <span class="number">3</span> -&gt; {
+352                         <span class="literal">try</span> {
+353                             System.<span class="ST4">out</span>.println(<span class="string">&quot;</span><span class="string">1.- Registrar vehiculo nuevo</span><span class="string">&quot;</span>);
+354                             System.<span class="ST4">out</span>.println(<span class="string">&quot;</span><span class="string">2.- Eliminar vehiculo existente</span><span class="string">&quot;</span>);
+355                             System.<span class="ST4">out</span>.println(<span class="string">&quot;</span><span class="string">Porfavor introduzca que desea hacer: </span><span class="string">&quot;</span>);
+356                             eleccion = Integer.<span class="ST5">parseInt</span>(scan.nextLine());
+357                         } <span class="literal">catch</span> (NumberFormatException exception) {
+358                             System.<span class="ST4">out</span>.println(<span class="string">&quot;</span><span class="string">Ingrese los datos correctamente</span><span class="string">&quot;</span>);
+359                         }
+360                         <span class="literal">if</span> (eleccion == <span class="number">1</span>) {
+361                             <span class="literal">try</span> {
+362                                 System.<span class="ST4">out</span>.println(<span class="string">&quot;</span><span class="string">Modelo: </span><span class="string">&quot;</span>);
+363                                 String modelo = scan.nextLine();
+364 
+365                                 System.<span class="ST4">out</span>.println(<span class="string">&quot;</span><span class="string">Color: </span><span class="string">&quot;</span>);
+366                                 String color = scan.nextLine();
+367 
+368                                 System.<span class="ST4">out</span>.println(<span class="string">&quot;</span><span class="string">Motor: </span><span class="string">&quot;</span>);
+369                                 String motor = scan.nextLine();
+370 
+371                                 System.<span class="ST4">out</span>.println(<span class="string">&quot;</span><span class="string">Numero de ruedas: </span><span class="string">&quot;</span>);
+372                                 <span class="literal">int</span> ruedas = Integer.<span class="ST5">parseInt</span>(scan.nextLine());
+373 
+374                                 System.<span class="ST4">out</span>.println(<span class="string">&quot;</span><span class="string">Numero asientos: </span><span class="string">&quot;</span>);
+375                                 <span class="literal">int</span> asientos = Integer.<span class="ST5">parseInt</span>(scan.nextLine());
+376 
+377                                 System.<span class="ST4">out</span>.println(<span class="string">&quot;</span><span class="string">Altura: </span><span class="string">&quot;</span>);
+378                                 <span class="literal">double</span> alto = Double.<span class="ST5">parseDouble</span>(scan.nextLine());
+379 
+380                                 System.<span class="ST4">out</span>.println(<span class="string">&quot;</span><span class="string">Anchura: </span><span class="string">&quot;</span>);
+381                                 <span class="literal">double</span> ancho = Double.<span class="ST5">parseDouble</span>(scan.nextLine());
+382 
+383                                 System.<span class="ST4">out</span>.println(<span class="string">&quot;</span><span class="string">Tipo de combustible: </span><span class="string">&quot;</span>);
+384                                 String tipoCombustible = scan.nextLine();
+385 
+386                                 System.<span class="ST4">out</span>.println(<span class="string">&quot;</span><span class="string">Capacidad del deposito: </span><span class="string">&quot;</span>);
+387                                 <span class="literal">double</span> capacidadDeposito = Double.<span class="ST5">parseDouble</span>(scan.nextLine());
+388                                 <span class="literal">double</span> <span class="comment">carga</span> = Double.<span class="ST5">parseDouble</span>(scan.nextLine());
+389 
+390                                 System.<span class="ST4">out</span>.println(<span class="string">&quot;</span><span class="string">Velocidad máxima: </span><span class="string">&quot;</span>);
+391                                 <span class="literal">double</span> velocidadMaxima = Double.<span class="ST5">parseDouble</span>(scan.nextLine());
+392 
+393                                 System.<span class="ST4">out</span>.println(<span class="string">&quot;</span><span class="string">Numero de puertas: </span><span class="string">&quot;</span>);
+394                                 <span class="literal">int</span> puertas = Integer.<span class="ST5">parseInt</span>(scan.nextLine());
+395 
+396                                 System.<span class="ST4">out</span>.println(<span class="string">&quot;</span><span class="string">Numero de luces: </span><span class="string">&quot;</span>);
+397                                 <span class="literal">int</span> luces = Integer.<span class="ST5">parseInt</span>(scan.nextLine());
+398 
+399                                 System.<span class="ST4">out</span>.println(<span class="string">&quot;</span><span class="string">Capacidad en maletero: </span><span class="string">&quot;</span>);
+400                                 <span class="literal">double</span> capacidadMaletero = Double.<span class="ST5">parseDouble</span>(scan.nextLine());
+401 
+402                                 System.<span class="ST4">out</span>.println(<span class="string">&quot;</span><span class="string">Precio: </span><span class="string">&quot;</span>);
+403                                 <span class="literal">double</span> precio = Double.<span class="ST5">parseDouble</span>(scan.nextLine());
+404 
+405                                 <span class="literal">int</span> idVehiculo = <span class="number">15</span>;
+406 
+407                                 <span class="comment">//Creacion del objeto</span>
+408                                 Vehiculo cocheNuevo = <span class="literal">new</span> Coche(puertas, modelo, luces, capacidadMaletero, idVehiculo++, color, motor, ruedas, asientos, alto, ancho, tipoCombustible, capacidadDeposito, velocidadMaxima, precio);
+409 
+410                                 <span class="comment">//Añadimos a la lista el coche</span>
+411                                 listaCoches.add(cocheNuevo);
+412                             } <span class="literal">catch</span> (NumberFormatException exception) {
+413                                 System.<span class="ST4">out</span>.println(<span class="string">&quot;</span><span class="string">Ingrese los datos correctamente</span><span class="string">&quot;</span>);
+414                             }
+415                         } <span class="literal">else</span> <span class="literal">if</span> (eleccion == <span class="number">2</span>) {
+416                             <span class="literal">try</span> {
+417                                 System.<span class="ST4">out</span>.println(listaCoches);
+418                                 System.<span class="ST4">out</span>.println(<span class="string">&quot;</span><span class="string">Modelo de coche a eliminar (jesko1): </span><span class="string">&quot;</span>);
+419                                 String eliminarCoche = scan.nextLine();
+420                                 <span class="literal">if</span> (!eliminarCoche.matches(<span class="string">&quot;</span><span class="string">[a-zA-Z]+</span><span class="string">&quot;</span>)) {
+421                                     <span class="literal">throw</span> <span class="literal">new</span> IllegalArgumentException(<span class="string">&quot;</span><span class="string">Ingresar un nombre de coche válido.</span><span class="string">&quot;</span>);
+422                                 }
+423                                 <span class="literal">if</span> (listaCoches.contains(eliminarCoche)) {
+424                                     listaCoches.remove(eliminarCoche);
+425                                 } <span class="literal">else</span> {
+426                                     System.<span class="ST4">out</span>.println(<span class="string">&quot;</span><span class="string">No existe</span><span class="string">&quot;</span>);
+427                                 }
+428                             } <span class="literal">catch</span> (IllegalArgumentException argumentException) {
+429                                 System.<span class="ST4">out</span>.println(<span class="string">&quot;</span><span class="string">Ingrese nombre valido</span><span class="string">&quot;</span>);
+430                             }
+431                         } <span class="literal">else</span> {
+432                             System.<span class="ST4">out</span>.println(<span class="string">&quot;</span><span class="string">Nope</span><span class="string">&quot;</span>);
+433                         }
+434                         <span class="literal">break</span>;
+435                     }
+436 
+437                     <span class="literal">case</span> <span class="number">4</span> -&gt; {
+438                         <span class="comment">//Cambio contraseña</span>
+439                         System.<span class="ST4">out</span>.println(<span class="string">&quot;</span><span class="string">Contraseña actual: </span><span class="string">&quot;</span>);
+440                         contrasenyaPedida = scan.nextLine();
+441                         <span class="literal">if</span> (contrasenyaPedida.equals(contrasenya)) {
+442                             System.<span class="ST4">out</span>.println(<span class="string">&quot;</span><span class="string">Contraseña nueva: </span><span class="string">&quot;</span>);
+443                             contrasenyaPedida = scan.nextLine();
+444                             <span class="comment">//Eliminamos la contraseña anterior</span>
+445                             contrasenya = <span class="string">&quot;&quot;</span>;
+446                             contrasenya = contrasenyaPedida;
+447                         } <span class="literal">else</span> {
+448                             System.<span class="ST4">out</span>.println(<span class="string">&quot;</span><span class="string">Las contraseñas no coinciden</span><span class="string">&quot;</span>);
+449                         }
+450                         <span class="literal">break</span>;
+451                     }
+452 
+453                 }
+454                 <span class="literal">try</span> {
+455                     System.<span class="ST4">out</span>.println(<span class="string">&quot;</span><span class="string">Desea realizar otra operacion (s/n): </span><span class="string">&quot;</span>);
+456                     rehacer = scan.nextLine();
+457                 } <span class="literal">catch</span> (NumberFormatException exception) {
+458                     System.<span class="ST4">out</span>.println(<span class="string">&quot;</span><span class="string">Ingrese la letra correctamente</span><span class="string">&quot;</span>);
+459                 }
+460             } <span class="literal">while</span> (rehacer.equalsIgnoreCase(<span class="string">&quot;</span><span class="string">s</span><span class="string">&quot;</span>));
+461         }
+462         System.<span class="ST4">out</span>.println(<span class="string">&quot;</span><span class="string">Gracias por usar el servicio</span><span class="string">&quot;</span>);
+463     }
+464 }
+465 
+</pre></body>
+</html>

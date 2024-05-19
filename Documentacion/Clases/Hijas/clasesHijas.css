@@ -1,0 +1,32 @@
+html{
+    background-color: black;
+    color: white;
+}
+
+.h2{
+    color: lightgreen;
+}
+
+#empleado{
+    color: crimson;
+}
+
+#vendedor{
+    color: lightblue;
+}
+
+#gerente{
+    color: deeppink;
+}
+
+#jefe{
+    color: lightpink;
+}
+
+#cliente{
+    color: gold;
+}
+
+#coche{
+    color: fuchsia;
+}
